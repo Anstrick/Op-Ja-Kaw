@@ -1,0 +1,2316 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Wix+Madefor+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  width:100%;
+  top: 0;
+  right:0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 52);
+  color: aquamarine;
+  padding: 0.5% 0.5%;
+  font-size: 1em;
+  line-height: 1.0;
+  box-shadow: 0px 1px 2px rgba(234, 126, 255, 0.5), 
+  0px 2px 4px rgba(234, 126, 255, 0.5), 
+  0px 4px 8px rgba(234, 126, 255, 0.5), 
+  0px 8px 16px rgba(234, 126, 255, 0.5);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 52);
+}
+
+#logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+#animatedLogo {
+  width: 250px;
+  margin-right: 5px;
+}
+
+#staticLogo {
+  width: 50px;
+  margin-right: 5px;
+  display: none;
+}
+
+#opslogo2 {
+  max-width: 3%;
+  margin-left: 58%;
+  margin-top: -4%;
+}
+
+.navBar {
+  display: flex;
+
+}
+
+.navBar a{
+  color: aquamarine;
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 0px 50px;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  transition: all .50s ease;
+}
+
+.navBar a:hover{
+  color: #ecb7ff;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+}
+
+.user{
+  color:white;
+  margin-right: 25px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.user:hover{
+  color: #ecb7ff;
+}
+
+#regButton{
+  background-image: linear-gradient(to right,rgb(122, 3, 191), #210193);
+  color: white;
+  margin-right: 30px;
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  padding:10px;
+  border-radius: 30px;
+}
+
+#regButton:hover{
+  background-color: #e4bbff;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 3px 15px rgba(160, 26, 255);
+}
+
+#menu-icon{
+  font-size: 25px;
+  color:aquamarine;
+  display:none;
+  cursor:pointer;
+}
+
+@media(max-width: 1280px){
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+
+}
+
+@media(max-width: 1090px){
+  #menu-icon {
+    display: block;
+  }
+
+  #menu-icon:hover{
+    color:#ecb7ff;
+  }
+
+  .navBar {
+    background-color: navy;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 250px;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
+  .navBar a {
+    display: block;
+    margin: 5px 0 5px 0;
+    font-size: 15px;
+    padding: 10px; 
+  }
+  .navBar a:hover {
+    background-color: #3806ad;
+    color: white;
+  }
+  .navBar.open {
+    right:0;
+  }
+
+}
+
+.mainLand {
+  background-image: url(Images/mainGif.gif);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: auto;
+  background-size: cover;
+  
+}
+
+#welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5em;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  margin: 12% auto 2% auto; /* Adjusted margin values */
+  width: 75%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+#welcome::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  animation: blinkCursor 0.8s infinite;
+  color:aquamarine;
+}
+
+@keyframes blinkCursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-family: 'Rubik', sans-serif;
+  margin: 0 auto 2% auto; /* Adjusted margin values */
+  width: 50%;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+#getstart {
+  background-image: linear-gradient(to right,aquamarine, #00bfaf);
+  color: navy;
+  padding: 1% 1.5%;
+  margin: 4.5% auto 12% auto;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  width: 20%;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: transform .2s; /* Animation */
+}
+
+#getstart:hover{
+  box-shadow: 0 3px 15px rgb(32, 255, 222);
+  transform: scale(1.2);
+}
+
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(Images/bg.jpg);
+  background-size: cover;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.introduce {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 5% auto 2% auto;
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+strong{
+  color:aquamarine;
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  margin: 2% auto 1% auto;
+}
+
+.createSR,
+.joinSR,
+.postFR {
+  flex-basis: 33%;
+  text-align: center;
+  margin: 2% 0;
+  width: auto;
+}
+
+.createSR img,
+.joinSR img,
+.postFR img {
+  max-width: 100%;
+  max-height: 300px; /* Adjust the maximum height as desired */
+  width: auto;
+  height: auto;
+  margin-right: 5% auto;
+  transition: .2s;
+}
+
+.createSR img:hover, 
+.joinSR img:hover,
+.postFR img:hover{
+  transform: scale(1.2);
+}
+
+.createSR .content,
+.joinSR .content,
+.postFR .content {
+  color: white;
+  font-family: 'Exo', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 5% auto;
+  line-height: 1.5;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#srf,
+#jsr,
+#sff {
+  color: white;
+  padding: 1% 1.5%;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.createSR p,
+.joinSR p,
+.postFR p {
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  margin: 1% auto;
+  line-height: 1.5;
+  width: 55%;
+
+}
+
+#tryNow {
+  background-image: linear-gradient(to right,aquamarine, #00bfaf);
+  color: navy;
+  padding: 0.7% 1.5%;
+  margin: 0 auto 5% auto;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  width: auto;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: .2s;
+}
+
+#tryNow:hover{
+  box-shadow: 0 3px 15px rgb(32, 255, 222);
+  transform: scale(1.2);
+}
+
+.benefits {
+  margin: 0 auto;
+  background-color: rgb(0, 0, 52);
+  display: flex;
+  flex-direction: column; /* Change flex direction to column */ /* Center vertically */
+  padding: 20px;
+  height: auto;
+}
+
+.benTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.benefitsTitle {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  margin: 3% auto 1% auto;
+  width: 75%;
+  letter-spacing: 1.5px;
+    background-image: linear-gradient(
+    -225deg,
+    #d084ff 0%,
+    #22ffd3 29%,
+    #d084ff 67%,
+    #67ffde 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: block;
+  font-size: 50px;
+  margin-left: auto; /* Add this to center the element */
+  margin-right: auto; /* Add this to center the element */
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.benefitsSub {
+  text-align: center;
+  margin: 1% 0;
+  color: aquamarine;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.benefit-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items to the top */
+  margin: 2% auto 1% auto;
+  flex-wrap: wrap; /* Allow wrapping to multiple lines */
+  color: white;
+}
+
+.bnft1,
+.bnft2,
+.bnft3 {
+  flex-basis: 33%;
+  text-align: center;
+  margin: 2% 0;
+  width: auto;
+}
+
+.bnftIntro {
+  flex: 1;
+  padding: 0 2%;
+}
+
+.bnftIntro h3{
+  color: #e4bbff;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 1% 1.5%;
+  margin: 5% auto 2% auto;
+}
+
+.bnftIntro p{
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  margin: 3% auto;
+  line-height: 1.5;
+  width: 75%;
+}
+
+.benefits img {
+  max-width: 100%;
+  max-height: 200px; /* Adjust the maximum height as desired */
+  width: auto;
+  height: auto;
+  margin-right: 5% auto;
+  transition: .2s;
+  border-radius: 50%; /* Apply border-radius to make the image circle */
+  object-fit: cover; /* Ensure the image fills the circular container */
+}
+
+.joinNow{
+background-image: linear-gradient(to top, rgb(2, 16, 97), #8502d7);
+padding: 20px;
+}
+
+#join {
+  text-align: center;
+  margin: 3% auto 0 auto;
+  font-size: 40px;
+  width: 50%;
+  color: white;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: 700;
+}
+
+#joinUS {
+  background-image: linear-gradient(to right,aquamarine, #00bfaf);
+  color: navy;
+  padding: 0.7% 1.5%;
+  margin: 2% auto 2% auto;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  width: 10%;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: .2s;
+}
+
+#joinUS:hover{
+  box-shadow: 0 3px 15px rgb(32, 255, 222);
+  transform: scale(1.2);
+}
+
+footer{
+  color: white;
+  font-size: 12px;
+  margin: 0.5% 1% 0 1%;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img{
+  width: 150px;
+  margin: 0 auto 0 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+.profile-button {
+  background-color: #e4bbff;
+  height: 3%;
+  width: 5%;
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  border-radius: 50px;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 1%;
+}
+
+.profile-btn img {
+  width: 2.5%;
+  height: 2.5%;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 4%;
+  right: 0;
+  background-color: aquamarine;
+  border-radius: 5px;
+  padding: 1%;
+  width: 12%;
+  display: none;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  display: block;
+  padding: 5px 10px;
+  color: #181818;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffffff;
+  color: navy;
+}
+/*Introduction*/
+
+/*--------------STUDY ROOM LANDING-----------------*/
+#srLand{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+
+#srCapt{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 450px 0px 450px
+}
+/*--------------CREATE ROOM BUTTON-----------------*/
+.createRoom{
+  background-image: linear-gradient(rgb(49, 1, 73),rgb(110, 0, 206));
+  margin-top: 30px;
+  margin-left: 400px;
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+#crTitle{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: left;
+  position: relative;
+  line-height: 35px;
+  top: 200px; left: 35px;
+  text-decoration: none;
+}
+
+#createcapt{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 210px; left: 35px;
+  width: 250px;
+}
+
+#cro{
+  background-color: aquamarine;
+  color: navy;
+  text-decoration: none;
+  position: relative;
+  top: 240px; left: 35px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+#cro:hover, #sro:hover{
+  background-color: #e4bbff;
+  color:rgb(0, 0, 52);
+}
+
+#cricon {
+  position: absolute;
+  top: 275px;
+  left: 475px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+/*--------------SEARCH ROOM BUTTON-----------------*/
+
+.searchRoom{
+  background-image: linear-gradient(rgb(49, 1, 73),rgb(110, 0, 206));
+  margin-top: -450px;
+  margin-left: 800px;
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+.searchRoom #sricon {
+  position: absolute;
+  top: 275px;
+  left: 875px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+#srTitle{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: left;
+  position: relative;
+  line-height: 40px;
+  top: 200px; left: 35px;
+  text-decoration: none;
+}
+
+#searchcapt{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 210px; left: 35px;
+  width: 250px;
+}
+
+#sro{
+  background-color: aquamarine;
+  color: navy;
+  text-decoration: none;
+  position: relative;
+  top: 250px; left: 35px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/*---------------------------------------------------*/
+#head2{
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 52);
+  color:aquamarine;
+  padding: 10px;
+  font-size: 12px;
+  height: 60px;
+  
+}
+
+#title2{
+  margin-left: 100px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bolder;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/*--------------VERTICAL NAVBAR-----------------*/
+#navList{
+  list-style-type: none;
+  width: 90px;
+  background-color: rgb(0, 0, 52);
+  height: 100%;
+  position: fixed;
+}
+#navList li {
+  text-align: center;
+}
+#logouticon {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+#usericon {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+}
+
+#forumicon {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+}
+
+#sricon{
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+}
+
+#verSRlanding{
+  font-family: 'Exo', sans-serif;
+  font-size: 15px;
+  color: white;
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+}
+
+#verSFlanding{
+  font-family: 'Exo', sans-serif;
+  font-size: 15px;
+  color: white;
+  position: relative;
+  top: 60px;
+  text-decoration: none;
+}
+
+#up{
+  font-family: 'Exo', sans-serif;
+  font-size: 15px;
+  color: white;
+  position: relative;
+  top: 100px;
+  text-decoration: none;
+}
+
+#logout{
+  font-family: 'Exo', sans-serif;
+  font-size: 15px;
+  color: white;
+  position: relative;
+  top: 250px;
+  text-decoration: none;
+}
+
+#up:hover, #verSFlanding:hover, #verSRlanding:hover,
+#logout:hover{
+  color:aquamarine;
+}
+
+/*--------------STUDY FORUM LANDING-----------------*/
+
+#sfLand{
+  color: lightgoldenrodyellow;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-left: 120px;
+}
+
+.forum-searchbar input{
+  height: 40px;
+  width: 500px;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.forum-searchbar input[placeholder="Search a Topic"]{
+  padding: 2px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size:18px;
+}
+
+#search-forum-btn{
+  background-color: #e4bbff;
+  color:rgb(0, 0, 52);
+  height: 45px;
+  width: 100px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size:18px;
+  margin-left: 5px;
+}
+
+#search-forum-btn:hover{
+  background-color:aquamarine;
+}
+
+#add-forum-btn{
+  position: absolute;
+  top: 138px;
+  right:250px;
+  background-color: #e4bbff;
+  color:rgb(0, 0, 52);
+  height: 47px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size:18px;
+  margin-left: 5px;
+}
+
+#add-forum-btn:hover{
+  background-color: aquamarine;
+  color: rgb(0, 0, 52);
+}
+
+#random-forums{
+  margin-left:120px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.forum-box{
+  background-color: white;
+  margin-top: 20px; margin-right:30px;
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.forum-box img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: 150px;
+}
+
+.forum-title {
+  font-size: 25px;
+  color:navy;
+  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.forum-description {
+  font-size: 13px;
+  margin-top: -15px;
+  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+}
+
+.forum-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.tag-button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: rgb(209, 209, 209);
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.tag-button:hover {
+  background-color:navy;
+  color:white;
+}
+
+.forum-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+.forum-tags p {
+  margin: 0;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+
+.author-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.author-info img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top:15px;
+  margin-right: 10px;
+}
+
+.author-name {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: navy;
+}
+
+.forum-date {
+  font-size: 12px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-left: 60px;
+  margin-top: -10px;
+}
+
+.reply-button {
+  background-color: aquamarine;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-left: 200px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+
+}
+
+.reply-button:hover {
+  background-color: rgb(0, 0, 52);
+  color:white;
+}
+
+
+/*----------ABOUT US-----------------*/
+
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about {
+  width: 45%;
+}
+
+#about-title {
+  width: 45%;
+  color: white;
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin: 75px 0px 0px 100px;
+  width: 500px;
+}
+
+#about-desc{
+  width: 45%;
+  color: white;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 20px 0px 0px 100px;
+  width: 500px;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  position: relative;
+  margin-top: 50px;
+  right: 70px;
+  z-index: -1;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.gallery-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: 400px; /* set your desired image height */
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-ctrl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.gallery-ctrl-left {
+  left: 0;
+}
+
+.gallery-ctrl-right {
+  right: 0;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.gallery-dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-dot, .gallery-dot.current-dot {
+  background-color: white;
+}
+
+.gallery-ctrl-left::before, .gallery-ctrl-right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-ctrl-left::before {
+  left: 20px;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.gallery-ctrl-right::after {
+  right: 20px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.gallery-ctrl-left:hover::before, .gallery-ctrl-right:hover::after {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.team {
+  padding: 20px;
+  position: absolute;
+  top: 500px;
+}
+
+#team_label {
+  color:white;
+  margin-left: 70px;
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.member-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 230px;
+}
+
+.member-container div {
+  flex: 0 0 250px; /* set the width of each item to 250px */
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  height: 150px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+
+.devName {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-left: 50px;
+  color: navy;
+}
+
+.devEmail {
+  color: gray;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 50px;
+}
+
+.teamdesc {
+  margin-top: 10px;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 50px;
+  font-size: 15px;
+}
+/*-------------------CREATE ROOM PAGE------------------------------*/
+.crPage{
+  background-image: linear-gradient(rgb(49, 1, 73),rgb(110, 0, 206));
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-top: 30px;margin-left: 460px;
+  height: 600px;
+  border-radius: 20px;
+  position: relative;
+}
+
+#crlabel{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin: 20px;
+  margin-top: 40px;
+  margin-left: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+
+#cr-close-btn,#cf-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 25px;
+  font-size: 20px;
+  background: none;
+  border-radius: 5px;
+  color: rgb(0, 0, 52);
+  background-color: aquamarine;
+  padding: 5px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+#cr-close-btn:hover, #cf-close-btn:hover{
+  background-color: white;
+  color:navy;
+}
+
+.crform-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-left:20px;
+    width: 550px;
+}
+
+.crform-container label{
+  color:white;
+  margin-bottom: 5px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.crform-container:nth-child(3){
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-left:20px;
+  width: 200px;
+}
+
+input[id="room-name"],
+input[id="num-participants"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  height: 25px;
+  border-radius: 10px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
+}
+
+.crform-container textarea{
+  margin-top: 5px;
+  border-radius: 5px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
+  padding:5px;
+}
+
+.cr-tagcont {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cr-tagcont label {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.roomtag-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.roomtag {
+  background-color: rgb(0, 0, 52);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.roomtag:hover{
+  background-color: #e4bbff;
+  color:navy;
+}
+
+.cr-submit {
+  background-color: aquamarine;
+  color: rgb(0, 0, 52);
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 230px;
+}
+
+.cr-submit:hover{
+  background-color: #e4bbff;
+  border: 2px solid rgb(0, 0, 52);
+}
+
+/*-------------------CREATE FORUM-------------*/
+
+.cfForum{
+  background-image: linear-gradient(rgb(49, 1, 73),rgb(110, 0, 206));
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-top: 30px;margin-left: 460px;
+  height: 600px;
+  border-radius: 20px;
+  position: relative;
+}
+
+#cflabel{
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin-left: 20px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.create-forum-form{
+  margin-top: 25px;
+}
+
+.cfform-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -15px;
+  margin-left:20px;
+  width: 550px;
+}
+
+.cfform-container label{
+  color:white;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+input[id="forum-name"] {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f5f5f5;
+  height: 30px;
+  border-radius: 10px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
+}
+
+.cfform-container textarea{
+  margin-top: 5px;
+  border-radius: 10px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
+  padding:5px;
+  margin-bottom: 10px;
+}
+
+.cf-tagcont {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cf-tagcont label {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.forum-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.forumtag {
+  background-color:#e4bbff;
+  color: rgb(0, 0, 52);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.forumtag:hover{
+  color:white;
+  background-color: navy;
+}
+
+.cfform-container input[placeholder="Write your content here..."],
+.cfform-container input[placeholder="Add title here..."]{
+  color:#181818;
+  margin: 10px;
+  padding: 2px;
+}
+
+.cf-submit {
+  background-color: aquamarine;
+  color: rgb(0, 0, 52);
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 155px;
+  width: 300px;
+}
+
+.cf-submit:hover{
+  background-color: #e4bbff;
+  border: 2px solid rgb(0, 0, 52);
+}
+
+/*---------------GENERAL USER PROFILE--------------------*/
+
+#prof-header {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:30px;
+  color:wheat;
+}
+
+.profile-container {
+  background-image: linear-gradient(aquamarine,rgb(200, 244, 255));
+  max-width: 1000px;
+  margin-left: 120px;
+  border-radius: 10px;
+  height: auto;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 150px;
+  background-color: #ddd;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: -50px;
+}
+
+.profile-picture {
+  position: relative;
+  top:-25px;
+  left: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: -100px;
+  background-color: #e4bbff;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#userName {
+  position: relative;
+  top: 40px;
+  left: 80px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  margin: 10px;
+}
+
+#userBio{
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top: 20px;
+  left: 80px;
+  width:600px;
+  height: 30px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+
+}
+
+.profile-content {
+  margin-top: 50px;
+}
+
+.profile-friends {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.profile-friends button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#title2{
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bolder;
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+#title2 a {
+text-decoration: none;
+color: aquamarine;
+}
+
+.genuser-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 80px;
+  margin-bottom: 15px;
+}
+
+.gu-tag {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  background-color: #00c392;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  width: 150px;  
+  transition: background-color 0.3s ease;
+}
+
+.gu-tag:hover {
+  background-color: rgb(1, 120, 88);
+  color: white;
+}
+
+.profile-buttons{
+  position: absolute;
+  left: 700px;
+  top: 320px;
+}
+
+
+.profile-content{
+  margin-left: 100px;
+  color: white;
+}
+
+.gu-forum{
+  margin-left: 18px;
+  margin-top: -25px;
+}
+
+.gu-forum button{
+  background-color: #00945b;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gu-forum button:hover,.gu-createdroom button:hover{
+  background-color: #008039;
+}
+
+.gu-createdroom button{
+  background-color: #00945b;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 300px;
+  top: 488px;
+}
+
+.genuser-forum-box{
+  background-color: rgb(255, 255, 255);
+  width: 980px;
+  color: black;
+  margin-top: 20px;
+  padding:10px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+}
+
+.gu-forum-title{
+  padding:5px 5px 0px 0px;
+}
+
+.gu-forum-content{
+  font-size: 15px;
+}
+
+#gu-lvr{
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.socialize-container{
+  position:absolute;
+  top: 150px;
+  right:50px;
+}
+
+.socialize-container button{
+  background-color: #e4bbff;
+  height: 60px;
+  width: 320px;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.socialize-container button:hover{
+  background-color: aquamarine;
+}
+
+.profile-friends{
+  border: 3px solid aquamarine;
+  position: absolute;
+  top: 250px;
+  right:50px;
+  width: 315px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  height: 400px;
+}
+
+#gu-friends{
+  color: aquamarine;
+  margin: 10px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+/*----------PERSONAL USER PROFILE------------------*/
+
+#anonymous-mode-btn{
+  margin-left: 80px;
+  background-color: #e4bbff;
+  color:rgb(0, 0, 52);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border:none;
+  padding: 5px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+#edit-profile-btn{
+  background-color: #e4bbff;
+  color:rgb(0, 0, 52);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border:none;
+  padding: 5px;
+  border-radius: 10px;
+  width: 125px;
+}
+
+#edit-profile-btn:hover,#anonymous-mode-btn:hover {
+  background-color: navy;
+  color:white;
+}
+
+.pu-faveroom button{
+  background-color: #00945b;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 300px;
+  top: 488px;
+}
+
+.pu-createdroom button{
+  background-color: #00945b;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 515px;
+  top: 488px;
+}
+
+.pu-faveroom button:hover,.pu-createdroom button:hover{
+  background-color: #008039;
+}
+.create-room-container {
+  position:absolute;
+  top: 180px;
+  right:50px;
+}
+
+#create-room-btn{
+  background-color: #e4bbff;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-right: 25px;
+  color:navy;
+}
+
+#create-room-btn:hover{
+  background-color: aquamarine;
+}
+
+.pu-profile-friends{
+  border: 3px solid aquamarine;
+  position: absolute;
+  top: 250px;
+  right:50px;
+  width: 315px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  height: 400px;
+}
+
+#pu-friends{
+  color: aquamarine;
+  margin: 10px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.pu-profile-friends button{
+  margin-top: 290px;
+  background-color: aquamarine;
+  height: 50px;
+  width: 280px;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-left: 20px;
+  color: navy;
+}
+
+.pu-profile-friends button:hover{
+  background-color: white;
+  color: navy;
+}
+
+.message-btn:hover {
+  background-color: #0077A3;
+}
+/*------------------SEARCH STUDY ROOM -------------*/
+#searchRoom{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+}
+
+.searchroom-page{
+  margin-left: 10px;
+  color: white;
+}
+
+.ssu-searchbar label{
+  display:none;
+}
+
+.ssu-searchbar input{
+  height: 50px;
+  width: 1100px;
+  position: relative;
+  left: 30px;
+  border-radius: 20px;
+}
+
+.ssu-searchbar input[placeholder="Search a Study Room"]{
+  padding: 2px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+#search-room-btn{
+  background-color: #e4bbff;
+  color:rgb(0, 0, 52);
+  height: 60px;
+  width: 150px;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size:20px;
+  margin-left: 50px;
+}
+
+#search-room-btn:hover{
+  background-color: aquamarine ;
+}
+
+.srtag-button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: aquamarine;
+  color: navy;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 115px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.srtag-button:hover {
+  background-color: #e4bbff;
+  color:navy;
+}
+
+.searchroom-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+  margin-left: 45px;
+}
+
+.searchroom-tags p {
+  margin: 0;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.study-rooms-container {
+  background-color: white;
+  max-width: 400px;
+  margin-left: 50px;
+  border-radius: 10px;
+  margin-top: 15px;
+  height: auto;
+}
+
+.study-room-cover {
+  width: 400px;
+  height: 100px;
+  background-color: #ddd;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.study-room-profile-pic {
+  position: relative;
+  top:-25px;
+  left: 120px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: -100px;
+  background-color: #e4bbff;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: auto;
+}
+
+.study-room-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.study-room-name{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: navy;
+  position: relative;
+  left: 80px;
+  top: -40px;
+}
+
+.study-room-online-users{
+  background-color: navy;
+  padding: 5px;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 5px;
+  position: absolute;
+  top: 405px;
+  left: 350px;
+}
+
+.study-room-description{
+  color:#000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  position: relative;
+  top: -20px;
+  left: 20px;
+}
+
+.srtag-btn{
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: aquamarine;
+  color: navy;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 115px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.join-room-btn{
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: navy;
+  color:white;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 115px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 250px;
+}
+
+
+
+/* user search page*/
+
+.usersearchtag {
+  background-color:#e4bbff;
+  color: rgb(0, 0, 52);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.usersearchtag:hover{
+  color:white;
+  background-color: navy;
+}
+
+#searchname{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+}
+
+.usersearch{
+  margin-left: 10px;
+  color: white;
+}
+
+.usersearch label{
+  display:none;
+}
+
+.usersearch input{
+  height: 50px;
+  width: 1100px;
+  position: relative;
+  left: 30px;
+  border-radius: 20px;
+}
+
+.usersearch input[placeholder="Search a Study Room"]{
+  padding: 2px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.usersearchtag {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: aquamarine;
+  color: navy;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 115px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: -70px;
+}
+
+.usersearchtag:hover {
+  background-color: #e4bbff;
+  color:navy;
+}
+
+.searchuser-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+  margin-left: 100px;
+}
+
+.card {
+  background-color: white;
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  height: auto;
+}
+
+.card-picture-container {
+  width:100%;
+  height: 100px;
+  background-color: #ddd;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.study-room-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+.user-name{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  color: navy;
+  position: relative;
+  left: 100px;
+  top: -50px;
+
+}
+
+.user-option-btn{
+  padding: 5px 10px;
+  margin-right: -55%;
+  background-color: aquamarine;
+  color: navy;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 115px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 55%;
+  
+}
+
+.user-option-btn:hover{
+  background-color: #e4bbff;
+  color:navy;
+}
+
+.user-tag-btn {
+  padding: 5px 10px;
+  margin-right: 0px;
+  background-color: aquamarine;
+  color: navy;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  width: 115px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.user-tag-btn:hover {
+  background-color: #e4bbff;
+  color:navy;
+}
+
+.user-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.study-room-name{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: navy;
+  position: relative;
+  left: 80px;
+  top: -40px;
+}
+
+#search-user{
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
+}
+
+.ssu-searchbar input[placeholder="Search for a friend"]{
+  padding: 2px;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.cards-container{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
