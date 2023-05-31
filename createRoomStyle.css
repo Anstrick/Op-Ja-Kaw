@@ -350,6 +350,7 @@ input:focus, textarea:focus{
   input[type="text"]::placeholder {
     color: rgb(206, 206, 206);
     font-family: 'Wix Madefor Display', sans-serif;
+    font-weight: 500;
   }
 
 
