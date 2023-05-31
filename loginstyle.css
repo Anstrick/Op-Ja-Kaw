@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+section .imgBx {
+  position: relative;
+  width: 40%;
+  height: 100%;
+}
+
+section .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, rgb(0, 75, 50), rgb(67, 0, 114));
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+section .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signup-message {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-message h2 {
+  font-size: 60px;
+  text-align: left;
+  margin: 0 auto 10px 50px;
+  width: 90%;
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+.signup-message p {
+  font-size: 25px;
+  text-align: left;
+  margin-top: 10px;
+  margin: 0 auto 10px 50px;
+  width: 70%;
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+#logoContainer {
+  position: absolute;
+  top: 4%;
+  left: 18%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index:2;
+}
+
+#staticLogo {
+  width: 250px;
+  margin-right: 5px;
+}
+
+.signup-welcome {
+  position: relative;
+  top: 30%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 2; 
+}
+
+#su-wel-title{
+  color: white; 
+}
+
+body{
+  /*add moving background image*/
+  background-image: url(Images/bg.jpg);
+  height:100%;
+}
+
+/*------------------SIGNUP PAGE--------------------*/
+
+section .contentBx{
+  background: linear-gradient(255deg, rgb(175, 104, 255), navy);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 80%;
+  margin: 5% auto 5% auto;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+section .contentBx .signupBox{
+  width: 80%;
+  height: auto;
+  margin-top: 2%;
+  position: relative;
+  top: -50px;
+}
+
+section .contentBx .signupBox h2 {
+  color: white;
+  font-family: 'Rubik';
+  font-weight: bold;
+  font-size: 35px;
+  margin: 18% auto 5% auto;
+  text-align: center;
+  display: block;
+}
+
+section .contentBx form{
+  margin-top: 25px;
+}
+
+
+section .contentBx .signupBox .inputBx{
+  margin-bottom: 20px;
+}
+
+section .contentBx .signupBox .inputBx.nameBx {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .name-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+section .name-container-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+section .name-container input {
+  margin-right: 15px;
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 2px solid white;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border-radius: 30px;
+  transition: border-color 0.3s ease;
+}
+
+section .name-container-right input::placeholder,
+section .name-container input::placeholder,
+section .inputBx input::placeholder
+ {
+  color: white;
+  font-family: 'Manrope',sans-serif;
+}
+
+section .contentBx .signupBox .inputBx span{
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color:white;
+  display: none;
+}
+
+section .inputBx input{
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid white;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border-radius: 30px;
+  transition: box-shadow 0.5s ease;
+}
+
+section .inputBx input:focus{
+  box-shadow: 0 0 5px aquamarine;
+  animation: glowing-border 2s ease-in-out infinite;
+}
+
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 5px aquamarine;
+  }
+  50% {
+    box-shadow: 0 0 20px aquamarine;
+  }
+  100% {
+    box-shadow: 0 0 5px aquamarine;
+  }
+}
+
+section .contentBx .signupBox .inputBx input[type="submit"]{
+  background: aquamarine;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: 700;
+  color: navy;
+  cursor: pointer;
+  margin: 2% auto 0 auto;
+  transition: transform 0.3s ease;
+}
+
+section .contentBx .signupBox .inputBx input[type="submit"]:hover{
+  background: #e4bbff;
+  transform: scale(1.1);
+}
+
+.haveAcct{
+  margin: 10% auto 0 auto;
+  text-align: center;
+}
+
+#haveAcct{
+  color:white;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: 600;
+}
+
+#haveLog{
+  color:aquamarine;
+  text-decoration: none;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: 600;
+  border: 2px aquamarine solid;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#haveLog:hover{
+  color: white;
+  border: 2px white solid;
+}
+
+
+@media (max-width: 1020px){
+  section .imgBx{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+
+  section .contentBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+}
+
+#logoContainer{
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index:2;
+}
+  
+}
+
+
+
+
+
+
+
