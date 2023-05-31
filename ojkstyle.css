@@ -132,7 +132,6 @@ body {
     padding: 5px 0;
     margin: 0px 20px;
   }
-
 }
 
 @media(max-width: 1090px){
@@ -169,7 +168,6 @@ body {
   .navBar.open {
     right:0;
   }
-
 }
 
 .mainLand {
@@ -179,7 +177,6 @@ body {
   margin: 0 auto;
   height: auto;
   background-size: cover;
-  
 }
 
 #welcome {
@@ -190,11 +187,12 @@ body {
   font-size: 5em;
   font-family: 'Rubik', sans-serif;
   font-weight: 800;
-  margin: 12% auto 2% auto; /* Adjusted margin values */
+  margin: 12% auto 2% auto;
   width: 75%;
   text-align: center;
   letter-spacing: 2px;
 }
+
 #welcome::after {
   content: '|';
   margin-left: 5px;
@@ -222,7 +220,7 @@ body {
   color: white;
   font-size: 25px;
   font-family: 'Rubik', sans-serif;
-  margin: 0 auto 2% auto; /* Adjusted margin values */
+  margin: 0 auto 2% auto;
   width: 50%;
   text-align: center;
   line-height: 1.5;
@@ -243,7 +241,7 @@ body {
   text-align: center;
   text-decoration: none;
   letter-spacing: 1px;
-  transition: transform .2s; /* Animation */
+  transition: transform .2s; 
 }
 
 #getstart:hover{
@@ -259,8 +257,8 @@ body {
   height: auto;
   margin: 0 auto;
   padding: 20px;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .introduce {
@@ -283,7 +281,7 @@ strong{
 .intro-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   margin: 2% auto 1% auto;
 }
 
@@ -300,7 +298,7 @@ strong{
 .joinSR img,
 .postFR img {
   max-width: 100%;
-  max-height: 300px; /* Adjust the maximum height as desired */
+  max-height: 300px; 
   width: auto;
   height: auto;
   margin-right: 5% auto;
@@ -313,21 +311,6 @@ strong{
   transform: scale(1.2);
 }
 
-.createSR .content,
-.joinSR .content,
-.postFR .content {
-  color: white;
-  font-family: 'Exo', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  margin: 5% auto;
-  line-height: 1.5;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
 #srf,
 #jsr,
@@ -380,7 +363,7 @@ strong{
   margin: 0 auto;
   background-color: rgb(0, 0, 52);
   display: flex;
-  flex-direction: column; /* Change flex direction to column */ /* Center vertically */
+  flex-direction: column; 
   padding: 20px;
   height: auto;
 }
@@ -416,8 +399,8 @@ strong{
   animation: textclip 2s linear infinite;
   display: block;
   font-size: 50px;
-  margin-left: auto; /* Add this to center the element */
-  margin-right: auto; /* Add this to center the element */
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 @keyframes textclip {
@@ -437,10 +420,10 @@ strong{
 
 .benefit-container {
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: flex-start; /* Align items to the top */
+  justify-content: center; 
+  align-items: flex-start; 
   margin: 2% auto 1% auto;
-  flex-wrap: wrap; /* Allow wrapping to multiple lines */
+  flex-wrap: wrap; 
   color: white;
 }
 
@@ -477,13 +460,13 @@ strong{
 
 .benefits img {
   max-width: 100%;
-  max-height: 200px; /* Adjust the maximum height as desired */
+  max-height: 200px; 
   width: auto;
   height: auto;
   margin-right: 5% auto;
   transition: .2s;
-  border-radius: 50%; /* Apply border-radius to make the image circle */
-  object-fit: cover; /* Ensure the image fills the circular container */
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 
 .joinNow{
@@ -536,71 +519,57 @@ footer img{
   margin: 0 auto 0 1%;
 }
 
+/*User Profile Dropdown*/
 
-
-
-
-
-
-
-
-
-
-
-/**/
-
-
-
-
-
-
-
-
-
-
-
-.profile-button {
-  background-color: #e4bbff;
-  height: 3%;
-  width: 5%;
-  position: absolute;
-  top: 1%;
-  right: 2%;
-  border-radius: 50px;
-}
-
-.profile-btn {
+.user-main{
   display: flex;
   align-items: center;
-  cursor: pointer;
-  margin: 1%;
+  position: relative;
 }
 
-.profile-btn img {
-  width: 2.5%;
-  height: 2.5%;
-  border-radius: 50%;
-  margin-left: 25px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 4%;
-  right: 0;
-  background-color: aquamarine;
-  border-radius: 5px;
-  padding: 1%;
-  width: 12%;
+.profile-button{
+  position:absolute;
+  top:100%;
+  right: 10%;
+  width: 320px;
   display: none;
 }
 
-.dropdown-menu ul {
+.sub-profile{
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+#userMenu{
+  border-radius: 50%;
+  width:40px;
+  margin-right: 20px;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+}
+
+.user-info h3{
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  color: navy;
+}
+
+.user-info img{
+  border-radius: 50%;
+}
+
+.sub-profile ul{
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.dropdown-menu li a {
+.sub-profile li a {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   display: block;
@@ -610,142 +579,13 @@ footer img{
   font-size: 0.8em;
 }
 
-.dropdown-menu li a:hover {
+.sub-profile li a:hover {
   background-color: #ffffff;
   color: navy;
 }
-/*Introduction*/
 
-/*--------------STUDY ROOM LANDING-----------------*/
-#srLand{
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 60px;
-  font-weight: 800;
-  text-align: center;
-  margin-top: 20px;
-  letter-spacing: 3px;
-}
-
-#srCapt{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  text-align: center;
-  margin: 10px 450px 0px 450px
-}
-/*--------------CREATE ROOM BUTTON-----------------*/
-.createRoom{
-  background-image: linear-gradient(rgb(49, 1, 73),rgb(110, 0, 206));
-  margin-top: 30px;
-  margin-left: 400px;
-  width: 350px;
-  height: 450px;
-  border-radius: 20px;
-}
-
-#crTitle{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  text-align: left;
-  position: relative;
-  line-height: 35px;
-  top: 200px; left: 35px;
-  text-decoration: none;
-}
-
-#createcapt{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-  top: 210px; left: 35px;
-  width: 250px;
-}
-
-#cro{
-  background-color: aquamarine;
-  color: navy;
-  text-decoration: none;
-  position: relative;
-  top: 240px; left: 35px;
-  height: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-#cro:hover, #sro:hover{
-  background-color: #e4bbff;
-  color:rgb(0, 0, 52);
-}
-
-#cricon {
-  position: absolute;
-  top: 275px;
-  left: 475px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-}
-/*--------------SEARCH ROOM BUTTON-----------------*/
-
-.searchRoom{
-  background-image: linear-gradient(rgb(49, 1, 73),rgb(110, 0, 206));
-  margin-top: -450px;
-  margin-left: 800px;
-  width: 350px;
-  height: 450px;
-  border-radius: 20px;
-}
-
-.searchRoom #sricon {
-  position: absolute;
-  top: 275px;
-  left: 875px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-}
-
-#srTitle{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  text-align: left;
-  position: relative;
-  line-height: 40px;
-  top: 200px; left: 35px;
-  text-decoration: none;
-}
-
-#searchcapt{
-  color:white;
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-  top: 210px; left: 35px;
-  width: 250px;
-}
-
-#sro{
-  background-color: aquamarine;
-  color: navy;
-  text-decoration: none;
-  position: relative;
-  top: 250px; left: 35px;
-  height: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+.profile-button.open {
+  display: block;
 }
 
 /*---------------------------------------------------*/
