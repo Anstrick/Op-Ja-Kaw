@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Wix+Madefor+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  width:100%;
+  top: 0;
+  right:0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 52);
+  color: aquamarine;
+  padding: 0.5% 0.5%;
+  font-size: 1em;
+  line-height: 1.0;
+  box-shadow: 0px 1px 2px rgba(15, 255, 239, 0.5), 
+  0px 2px 4px rgba(0, 255, 234, 0.5), 
+  0px 4px 8px rgba(0, 180, 153, 0.5), 
+  0px 8px 16px rgba(0, 255, 247, 0.884);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-image: url(Images/srLand-bg.jpg);
+  background-size:cover;
+}
+
+#logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+#animatedLogo {
+  width: 250px;
+  margin-right: 5px;
+}
+
+#staticLogo {
+  width: 50px;
+  margin-right: 5px;
+  display: none;
+}
+
+#opslogo2 {
+  max-width: 3%;
+  margin-left: 58%;
+  margin-top: -4%;
+}
+
+.navBar {
+  display: flex;
+
+}
+
+.navBar a{
+  color: aquamarine;
+  font-size: 18px;
+  padding: 10px 0;
+  margin: 0px 50px;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  transition: all .50s ease;
+}
+
+.navBar a:hover{
+  color: #ecb7ff;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+}
+
+
+#menu-icon{
+  font-size: 25px;
+  color:aquamarine;
+  display:none;
+  cursor:pointer;
+}
+
+@media(max-width: 1280px){
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+
+}
+
+@media(max-width: 1090px){
+  #menu-icon {
+    display: block;
+  }
+
+  #menu-icon:hover{
+    color:#ecb7ff;
+  }
+
+  .navBar {
+    background-color: navy;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 250px;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
+  .navBar a {
+    display: block;
+    margin: 5px 0 5px 0;
+    font-size: 15px;
+    padding: 10px; 
+  }
+  .navBar a:hover {
+    background-color: #3806ad;
+    color: white;
+  }
+  .navBar.open {
+    right:0;
+  }
+}
+
+.mainLand {
+  background-image: url(Images/mainGif.gif);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: auto;
+  background-size: cover;
+  
+}
+
+/*User Profile Dropdown*/
+
+.user-main{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-button{
+  position:absolute;
+  top:100%;
+  right: 10%;
+  width: 300px;
+  display: none;
+  
+}
+
+.sub-profile{
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  box-shadow:0 3px 15px rgba(17, 0, 29, 0.5);
+}
+
+#userMenu{
+  border-radius: 50%;
+  width:40px;
+  margin-right: 20px;
+  cursor:pointer;
+}
+
+#userMenu:hover{
+    box-shadow: 0 3px 15px rgb(215, 160, 255);
+    transform: scale(1.2);
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.user-info h3{
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  color: navy;
+}
+
+.user-info img{
+  border-radius: 50%;
+}
+
+.sub-profile ul{
+  list-style: none;
+  padding: 1;
+  margin: 10;
+}
+
+.sub-profile li a {
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: 700;
+  display: block;
+  padding: 5px 10px;
+  color: navy;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.sub-profile li a:hover {
+  background-color: #f8c2ff;
+  color: navy;
+}
+
+.profile-button.open {
+  display: block;
+}
+
+/*--------------STUDY ROOM LANDING-----------------*/
+
+.srLanding{
+    margin-top: 10px;
+}
+
+.srIntro{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 8% auto 2% auto;
+  width: 75%;
+  text-align: center;
+}
+.srIntro h2{
+    color: white;
+    font-size: 60px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2px;
+}
+
+.srIntro p{
+    margin: 0 auto 0 auto;
+    color: white;
+    font-size: 20px;
+    font-family: 'Wix Madefor Display', sans-serif;
+    width: 75%;
+    text-align: center;
+}
+
+.studyOption {
+  margin: 0 auto 2% auto;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 50%;
+  
+}
+
+.studyOption > div {
+  flex-basis: 45%;
+  padding: 20px;
+  margin: 10px;
+  background-image: linear-gradient(rgb(49, 1, 73), rgb(110, 0, 206));
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.studyOption > div.createRoom img,
+.searchRoom #sricon {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.studyOption > div h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 35px;
+}
+
+.studyOption > div p {
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+.studyOption > div a {
+  color: navy;
+  display: inline-flex;
+  width: fit-content;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right,aquamarine, #00bfaf);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: bold;
+
+}
+
+.studyOption > div a:hover {
+  box-shadow: 0 3px 15px rgb(32, 255, 222);
+  transform: scale(1.2);
+}
+
+@media (max-width: 1020px) {
+   .srLanding{
+        margin-top: 100px;
+    }
+    
+    .studyOption {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .studyOption > div {
+        flex-basis: 100%;
+      }
+    
+    .searchRoom {
+      flex-basis: 100%;
+      width: auto;
+    }
+  }
+  
+  
+  
+  
+  
+  
