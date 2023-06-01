@@ -11,15 +11,15 @@ session_start();
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$email = $_POST['email'];
-		$firstname = $_POST['first_name'];
-		$lastname = $_POST['last_name'];
+		$first_name = $_POST['first_name'];
+		$last_name = $_POST['last_name'];
 
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
 
 			//save to database
 			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password,email,first_name,last_name) values ('$user_id','$username','$password','$email','$firstname','$lastname')";
+			$query = "insert into users (user_id,user_name,password,email,first_name,last_name) values ('$user_id','$username','$password','$email','$first_name','$last_name')";
 
 			mysqli_query($con, $query);
 
@@ -63,11 +63,11 @@ session_start();
                         <div class="inputBx nameBx">
                             <div class="name-container">
                                 <span>First Name</span>
-                                <input type="text" name="firstname" placeholder="First Name">
+                                <input type="text" name="first_name" placeholder="First Name">
                             </div>
                             <div class="name-container-right">
                                 <span>Last Name</span>
-                                <input type="text" name="lastname" placeholder="Last Name">
+                                <input type="text" name="last_name" placeholder="Last Name">
                             </div>
                         </div>
                         <div class="inputBx">
