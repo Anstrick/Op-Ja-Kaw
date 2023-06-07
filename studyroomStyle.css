@@ -341,7 +341,162 @@ body {
     }
   }
   
+/*------------Search Study Room Style------------*/
+.searchSR_landing {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+/* Heading Styles */
+#searchRoom {
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+/* Search Container Styles */
+.ssu-search-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.ssu-searchbar {
+  display: flex;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 10px;
+  display: none;
+}
+
+#search-room {
+  width: 1000px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#search-room-btn {
+  padding: 5px 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 10px;
+  background-color: #ecb7ff ;
+  font-family: 'Wix Madefor Display';
+  font-weight: bold;
+  font-size: 15px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.ssu-searchbar input{
+  color: darkblue;
+  font-family: 'Wix Madefor Display';
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+
+/* Study Rooms Container Styles */
+.study-rooms-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.study-room {
+  width: 300px;
+  margin: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.study-room:hover {
+  transform: translateY(-5px);
+}
+
+.study-room-info {
+  padding: 0px;
+}
+
+.study-room-info .study-room-cover img {
+  width: 100%;
+  height: 150px;
+  background-color: #ccc;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.study-room-info .study-room-profile-pic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -10%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: #5d5d5d;
+}
+
+.study-room-details {
+  text-align: center;
+}
+
+.study-room-name {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+}
+
+.study-room-description {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.join-room-btn {
+  padding: 10px 20px;
+  background-color: #37006f;
+  color: #ffffff;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.join-room-btn:hover {
+  background-color: #f7adff;
+  color: navy;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .ssu-search-container {
+    flex-direction: column;
+    align-items: center;
+  }
   
+  #search-room {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .study-room {
+    width: 100%;
+  }
+}
   
   
   
