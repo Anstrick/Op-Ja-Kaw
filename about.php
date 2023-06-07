@@ -25,7 +25,7 @@ $username = $_SESSION['user_name'];
     </head>
     <body>
         <header>
-            <a href="Home.php" id = "logoContainer">
+            <a href="start.php" id = "logoContainer">
                 <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
                 <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
             </a>

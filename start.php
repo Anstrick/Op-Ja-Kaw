@@ -23,11 +23,11 @@ $username = $_SESSION['user_name'];
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-        <script src="studyroomJS.js"></script>
+        <script src="headerJava.js"></script>
     </head>
     <body>
-    <header>
-            <a href="Home.php" id = "logoContainer">
+        <header>
+            <a href="start.php" id = "logoContainer">
                 <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
                 <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
             </a>
@@ -36,26 +36,12 @@ $username = $_SESSION['user_name'];
                 <li><a href="sflanding.php" class="sfButton">Study Forums</a></li>
                 <li><a href="about.php">About Us</a></li>
             </ul>
-    
+         
+
             <div class="main">
+                <a href="loginpage.php" class="user">Login</a>
+                <a href="signuppage.php" id="regButton">Register</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
-            </div>
-    
-            <div class="user-main">
-                <img src="https://via.placeholder.com/60" alt="Profile Picture" id="userMenu">
-                <div class="profile-button" id="profileBtn">
-                    <div class="sub-profile">
-                        <div class="user-info">
-                            <img src="https://via.placeholder.com/60" alt="Profile Picture">
-                            <h3 id="user-name"><?php echo $username?></h3>
-                        </div>
-                        <ul>
-                            <li><a href="personalprofile.php">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="Logout.php">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </header>
         <div class="mainLand">
@@ -73,14 +59,14 @@ $username = $_SESSION['user_name'];
             </div>
             <div class="intro-container">
                 <div class="createSR">
-                    <a href="createroom.php"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
+                    <a href="signuppage.php"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
                     <div class="intro-content">
                         <a id ="srf" href ="createroom.php">Create Study Rooms</a>
                         <p id = "createIntro">Design and Personalize Your Ideal Learning Space!</p>
                     </div>
                 </div>
                 <div class="joinSR">
-                    <a href="srlanding.php"><img src="Images/intro-jg.png" alt="intro-jg" id="intro-jg"></a>
+                    <a href="signuppage.php"><img src="Images/intro-jg.png" alt="intro-jg" id="intro-jg"></a>
                     <div class="intro-content">
                         <a id ="jsr" href ="srlanding.php">Join Study Spaces</a>
                         <p id ="joinIntro">Collaborate and Connect with Like-minded Learners in Dynamic Study Environments!</p>
@@ -88,14 +74,14 @@ $username = $_SESSION['user_name'];
                 </div>
 
                 <div class="postFR">
-                    <a href="sflanding.php"><img src="Images/intro-pf.png" alt="intro-pf" id="intro-pf"></a>
+                    <a href="signuppage.php"><img src="Images/intro-pf.png" alt="intro-pf" id="intro-pf"></a>
                     <div class="intro-content">
                         <a id ="sff" href ="sflanding.php">Post Forums</a>
                         <p id = "forumIntro">Spark Intellectual Conversations in our Forum Communities!</p>
                     </div>
                 </div>
             </div>
-            <!-- <a id ="tryNow" href="Home.php">Try it out!</a> -->
+            <a id ="tryNow" href="signuppage.php">Try it out!</a>
         </div>
     
         <!--Benefits-->

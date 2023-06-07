@@ -34,7 +34,7 @@ session_start();
 					{
 
 						$_SESSION['user_name'] = $user_data['user_name'];
-						header("Location: personalprofile.php");
+						header("Location: Home.php");
 						// die;
 					}
 				}
@@ -60,7 +60,7 @@ session_start();
         <script src="headerJava.js"></script>
     </head>
     <body>
-        <a href="Home.php" id="logoContainer">
+        <a href="start.php" id="logoContainer">
             <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
          </a>
         <section>
