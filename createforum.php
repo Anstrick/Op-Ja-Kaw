@@ -22,10 +22,20 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 			//save to database
 			$query = "insert into forum (user_name, forum_title, forum_content) values ('$username','$forum_title','$forum_content')";
+            
+            // $forum_id = mysqli_insert_id($conn);
+            if ($conn -> query($query) === TRUE) {
+                $last_id = $conn -> insert_id;
+                echo "Last inserted id: " . $last_id;
+            }
 
-			mysqli_query($conn, $query);
+                //$sql = "SELECT * FROM forum where forum_title = $forum_title";
+                
+                //$result = $conn->query($sql);
+                //$row = $result->fetch_assoc();
+                //$forum_id = $row['forum_id'];
 
-			//header("Location: specificforumpage.php/");
+			header("Location: specificforum.php?forum_id=".$last_id);
 			die;
 		}else
 		{
