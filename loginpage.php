@@ -78,7 +78,7 @@ session_start();
                         </div>
                         <div class="inputBx">
                             <span>Password</span>
-                            <input type="text" name="" placeholder="Password">
+                            <input type="password" name="" placeholder="Password">
                         </div>
                         <div class="inputBx">
                             <input type="submit" value="Log In" name="">
