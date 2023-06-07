@@ -34,7 +34,7 @@ session_start();
 					{
 
 						$_SESSION['user_name'] = $user_data['user_name'];
-						header("Location: Home.php");
+						header("Location: personalprofile.php");
 						// die;
 					}
 				}

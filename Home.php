@@ -32,9 +32,9 @@ $username = $_SESSION['user_name'];
                 <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
             </a>
             <ul class="navBar" id="navLinks">
-                <li><a href="srlanding.html">Study Rooms</a></li>
-                <li><a href="sflanding.html" class="sfButton">Study Forums</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="srlanding.php">Study Rooms</a></li>
+                <li><a href="sflanding.php" class="sfButton">Study Forums</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
          
 
@@ -61,14 +61,14 @@ $username = $_SESSION['user_name'];
                 <div class="createSR">
                     <a href="signuppage.php"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
                     <div class="intro-content">
-                        <a id ="srf" href ="createroom.html">Create Study Rooms</a>
+                        <a id ="srf" href ="createroom.php">Create Study Rooms</a>
                         <p id = "createIntro">Design and Personalize Your Ideal Learning Space!</p>
                     </div>
                 </div>
                 <div class="joinSR">
                     <a href="signuppage.php"><img src="Images/intro-jg.png" alt="intro-jg" id="intro-jg"></a>
                     <div class="intro-content">
-                        <a id ="jsr" href ="srlanding.html">Join Study Spaces</a>
+                        <a id ="jsr" href ="srlanding.php">Join Study Spaces</a>
                         <p id ="joinIntro">Collaborate and Connect with Like-minded Learners in Dynamic Study Environments!</p>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ $username = $_SESSION['user_name'];
                 <div class="postFR">
                     <a href="signuppage.php"><img src="Images/intro-pf.png" alt="intro-pf" id="intro-pf"></a>
                     <div class="intro-content">
-                        <a id ="sff" href ="sflanding.html">Post Forums</a>
+                        <a id ="sff" href ="sflanding.php">Post Forums</a>
                         <p id = "forumIntro">Spark Intellectual Conversations in our Forum Communities!</p>
                     </div>
                 </div>

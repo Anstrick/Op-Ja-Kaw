@@ -26,7 +26,7 @@ $username = $_SESSION['user_name'];
     </head>
     <body>
         <header>
-            <a href="Home.html" id = "logoContainer">
+            <a href="Home.php" id = "logoContainer">
                 <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
                 <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
             </a>
@@ -49,7 +49,7 @@ $username = $_SESSION['user_name'];
                             <h3 id="user-name"><?php echo $username?></h3>
                         </div>
                         <ul>
-                            <li><a href="personalprofile.html">Profile</a></li>
+                            <li><a href="personalprofile.php">Profile</a></li>
                             <li><a href="#">Settings</a></li>
                             <li><a href="Home.php">Logout</a></li>
                         </ul>
@@ -73,7 +73,7 @@ $username = $_SESSION['user_name'];
                         <p id="createcapt">Create your own virtual space where you can study
                             alone or collaborate with others online</p>
                     </div>
-                    <a id="cro" href = "createroom.html">Create now!</a>
+                    <a id="cro" href = "createroom.php">Create now!</a>
                 </div>
                 <div class="searchRoom">
                     <img src="Images/searchroomicon.png" alt = "searchroomicon" id="sricon">
@@ -81,7 +81,7 @@ $username = $_SESSION['user_name'];
                         <h2 id="srTitle">Search for Rooms</h2>
                         <p id="searchcapt">Find study rooms that fits your taste</p>
                     </div>
-                    <a id ="sro" href = "searchstudyroom.html">Search!</a>
+                    <a id ="sro" href = "searchstudyroom.php">Search!</a>
                 </div>
             </div>
         </div>

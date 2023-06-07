@@ -22,6 +22,7 @@ let joinAndDisplayLocalStream = async () => {
   let player = `
     <div class="video-container" id="user-container-${UID}">
         <div class="video-player" id="user-${UID}"></div>
+        <div class="username">${document.getElementById('username').innerHTML}</div>
     </div>
   `;
   document.getElementById("video-streams").insertAdjacentHTML("beforeend", player);
@@ -50,7 +51,7 @@ let handleUserJoined = async (user, mediaType) => {
     player = `
       <div class="video-container" id="user-container-${user.uid}">
         <div class="video-player" id="user-${user.uid}"></div>
-        <div class="username">${document.getElementById('username').innerHTML}</div>
+        <div class="username">anon</div>
       </div>`;
     document.getElementById("video-streams").insertAdjacentHTML("beforeend", player);
 
