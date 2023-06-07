@@ -6,6 +6,7 @@ const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
 
 let localTracks = []
 let remoteUsers = {}
+//let username = document.getElementById('myElement').innerHTML;
 
 let joinAndDisplayLocalStream = async () => {
 
@@ -45,7 +46,7 @@ let handleUserJoined = async (user, mediaType) => {
   
       player = `<div class="video-container" id="user-container-${user.uid}">
                   <div class="video-player" id="user-${user.uid}"></div>
-                  <div class="username">${user.uid}</div>
+                  <div class="username">${document.getElementById('myElement').innerHTML}</div>           
                </div>`;
       document
         .getElementById("video-streams")

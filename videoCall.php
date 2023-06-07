@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$username = $_SESSION['user_name'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +38,7 @@
     <div id="stream-wrapper">
         <script>user.videoTrack.play(`user-${user.uid}`)</script>
         <div id="video-streams"></div>
+        <div class="username" id="username"><?php echo $username?></div>
 
         <div id="stream-controls">
             <button id="leave-btn">Leave Stream</button>
