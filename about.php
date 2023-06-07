@@ -25,14 +25,14 @@ $username = $_SESSION['user_name'];
     </head>
     <body>
         <header>
-            <a href="Home.html" id = "logoContainer">
+            <a href="Home.php" id = "logoContainer">
                 <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
                 <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
             </a>
             <ul class="navBar" id="navLinks">
-                <li><a href="srlanding.html">Study Rooms</a></li>
-                <li><a href="sflanding.html" class="sfButton">Study Forums</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="srlanding.php">Study Rooms</a></li>
+                <li><a href="sflanding.php" class="sfButton">Study Forums</a></li>
+                <li><a href="about.php">About Us</a></li>
             </ul>
     
             <div class="main">
@@ -48,7 +48,7 @@ $username = $_SESSION['user_name'];
                             <h3 id="user-name"><?php echo $username?></h3>
                         </div>
                         <ul>
-                            <li><a href="personalprofile.html">Profile</a></li>
+                            <li><a href="personalprofile.php">Profile</a></li>
                             <li><a href="#">Settings</a></li>
                             <li><a href="Logout.php">Logout</a></li>
                         </ul>
