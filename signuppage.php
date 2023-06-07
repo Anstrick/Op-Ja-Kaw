@@ -18,8 +18,7 @@ session_start();
 		{
 
 			//save to database
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password,email,first_name,last_name) values ('$user_id','$username','$password','$email','$first_name','$last_name')";
+			$query = "insert into users (user_name,password,email,first_name,last_name) values ('$username','$password','$email','$first_name','$last_name')";
 
 			mysqli_query($conn, $query);
 

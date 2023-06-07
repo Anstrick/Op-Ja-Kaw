@@ -17,7 +17,7 @@ session_start();
 
 			//read from database
 			$query = "select * from users where email = '$email' limit 1";
-			$result = mysqli_query($con, $query);
+			$result = mysqli_query($conn, $query);
 
 			if($result)
 			{
