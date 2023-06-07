@@ -8,5 +8,9 @@ if(isset($_SESSION['user_id']))
 
 }
 
-header("Location: login.php");
+session_destroy();
+
+header("Location: loginpage.php");
 die;
+
+

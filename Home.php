@@ -59,7 +59,7 @@ $username = $_SESSION['user_name'];
             </div>
             <div class="intro-container">
                 <div class="createSR">
-                    <a href="signuppage.html"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
+                    <a href="signuppage.php"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
                     <div class="intro-content">
                         <a id ="srf" href ="createroom.html">Create Study Rooms</a>
                         <p id = "createIntro">Design and Personalize Your Ideal Learning Space!</p>
