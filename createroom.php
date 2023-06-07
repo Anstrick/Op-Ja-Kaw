@@ -81,7 +81,7 @@ $username = $_SESSION['user_name'];
         <div class="crPage">
             <div class="createBx">
                 <a id = "cr-close-btn" href="srlanding.php">X</button></a>
-                <form class="create-room-form" method="videoCall.php">
+                <form class="create-room-form" method="POST" action="videoCall.php">
                     <h2 id="crlabel">Create Room</h2>
                     <div class="crform-container">
                         <label for="room-name" id="rn">Room Name:</label>
@@ -99,7 +99,7 @@ $username = $_SESSION['user_name'];
                         
                         <div id="tagsContainer"></div>
                     </div>
-                    <input type="submit" value="Create Room" class="cr-submit">
+                    <input type="submit" value="Create Room" class="cr-submit"> 
 	            </form>
             </div>
         </div>
