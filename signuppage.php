@@ -80,11 +80,11 @@ session_start();
                         </div>
                         <div class="inputBx">
                             <span>Password</span>
-                            <input type="text" name="password" placeholder="Password">
+                            <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="inputBx">
                             <span>Confirm Password</span>
-                            <input type="text" name="" placeholder="Confirm Password">
+                            <input type="password" name="" placeholder="Confirm Password">
                         </div>
                         <div class="inputBx">
                             <input type="submit" value="Sign Up" name="">
