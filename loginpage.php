@@ -74,11 +74,11 @@ session_start();
                     <form method="post">
                         <div class="inputBx">
                             <span>Email</span>
-                            <input type="email" name="" placeholder="Email">
+                            <input type="email" name="email" placeholder="Email">
                         </div>
                         <div class="inputBx">
                             <span>Password</span>
-                            <input type="text" name="" placeholder="Password">
+                            <input type="password" name="password" placeholder="Password">
                         </div>
                         <div class="inputBx">
                             <input type="submit" value="Log In" name="">
