@@ -4,14 +4,11 @@ const CHANNEL = "opjakaw";
 
 const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 
-<<<<<<< HEAD
+
 let localTracks = [];
 let remoteUsers = {};
-=======
-let localTracks = []
-let remoteUsers = {}
 //let username = document.getElementById('myElement').innerHTML;
->>>>>>> dbd87c127b2e1548c4a0f91be02fda5b5f67d49f
+
 
 let joinAndDisplayLocalStream = async () => {
   client.on("user-published", handleUserJoined);
@@ -41,7 +38,6 @@ let joinStream = async () => {
 };
 
 let handleUserJoined = async (user, mediaType) => {
-<<<<<<< HEAD
   remoteUsers[user.uid] = user;
   await client.subscribe(user, mediaType);
 
@@ -49,26 +45,6 @@ let handleUserJoined = async (user, mediaType) => {
     let player = document.getElementById(`user-container-${user.uid}`);
     if (player != null) {
       player.remove();
-=======
-    remoteUsers[user.uid] = user;
-    await client.subscribe(user, mediaType);
-  
-    if (mediaType === "video") {
-      let player = document.getElementById(`user-container-${user.uid}`);
-      if (player != null) {
-        player.remove();
-      }
-  
-      player = `<div class="video-container" id="user-container-${user.uid}">
-                  <div class="video-player" id="user-${user.uid}"></div>
-                  <div class="username">${document.getElementById('myElement').innerHTML}</div>           
-               </div>`;
-      document
-        .getElementById("video-streams")
-        .insertAdjacentHTML("beforeend", player);
-  
-      user.videoTrack.play(`user-${user.uid}`);
->>>>>>> dbd87c127b2e1548c4a0f91be02fda5b5f67d49f
     }
 
     player = `
