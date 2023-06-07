@@ -79,11 +79,6 @@ $username = $_SESSION['user_name'];
             <h2 class="forum-title">Forum Title 1</h2>
             <p class="forum-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor dolor sed ex maximus, sed vestibulum libero dignissim.</p>
             <div class="forum-info">
-              <div class="forum-tags">
-                <button class="tag-button">Tag1</button>
-                <button class="tag-button">Tag2</button>
-                <button class="tag-button">Tag3</button>
-              </div>
               <div class="author-info">
                 <img src="https://via.placeholder.com/50" alt="Author Profile Image">
                 <p class="author-name">Author Name</p>
