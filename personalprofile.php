@@ -91,6 +91,7 @@ $username = $_SESSION['user_name'];
                     <!-- Forum posts content here -->
                       <div class="userforum">
                       <div class="forum-user-picture">
+                        <p class="forum-time">Time</p>
                         <img src="https://via.placeholder.com/200" alt="Profile Picture">
                       </div>
                       <div class="forum-content">

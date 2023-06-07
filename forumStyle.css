@@ -591,27 +591,27 @@ body{
 }
 
 #gu-add,
-#gu-send{
+#gu-send {
   width: 100%;
-  padding: 10px;
+  padding: 1vw;
 }
 
 #gu-create {
   width: 100%;
   height: 10vh;
-  padding: 5%;
+  padding: 2%;
 }
 
 #gu-add,
 #gu-send,
 #gu-create {
   display: block;
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 1vh;
+  font-size: 1.5vw;
   color: navy;
-  font-family: 'Rubik',sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
-  padding: 10px;
+  padding: 1vw;
   background-image: linear-gradient(225deg, rgb(222, 189, 255), rgb(216, 149, 255));
   border: none;
   cursor: pointer;
@@ -620,30 +620,31 @@ body{
 
 #gu-add:hover,
 #gu-send:hover,
-#gu-create:hover{
-  color:white;
+#gu-create:hover {
+  color: white;
   background-image: linear-gradient(225deg, rgb(62, 0, 123), rgb(53, 0, 84));
 }
+
 /* Friends section */
 .profile-friends {
-  margin-top: 45px;
-  margin-left: -50px;
+  margin-top: 3vh;
+  margin-left: -5vw;
   display: flex;
   flex-direction: column;
   border: 2px aquamarine solid;
   border-radius: 5px;
-  padding: 10px;
-  width: 300px;
+  padding: 1vw;
+  width: 20vw;
 }
 
-.friends-container{
-  color:white;
+.friends-container {
+  color: white;
   font-family: 'Space Grotesk', sans-serif;
 }
 
 #friends-title {
-  margin-bottom: 10px;
-  color:white;
+  margin-bottom: 1vh;
+  color: white;
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -784,4 +785,8 @@ body{
 
 .forum-text {
   margin: 0;
+}
+
+.forum-time{
+  margin-left: 110px;
 }
