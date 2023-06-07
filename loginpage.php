@@ -20,6 +20,7 @@ session_start();
                     FROM users 
                     WHERE email = '$email' 
                     LIMIT 1";
+
 			$result = mysqli_query($conn, $query);
 
 			if($result)
