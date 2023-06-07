@@ -16,7 +16,11 @@ session_start();
 		{
 
 			//read from database
-			$query = "select * from users where email = '$email' limit 1";
+			$query = "SELECT * 
+                    FROM users 
+                    WHERE email = '$email' 
+                    LIMIT 1";
+
 			$result = mysqli_query($conn, $query);
 
 			if($result)
@@ -29,9 +33,9 @@ session_start();
 					if($user_data['password'] === $password)
 					{
 
-						$_SESSION['user_id'] = $user_data['user_id'];
+						$_SESSION['user_name'] = $user_data['user_name'];
 						header("Location: Home.php");
-						die;
+						// die;
 					}
 				}
 			}
@@ -56,7 +60,7 @@ session_start();
         <script src="headerJava.js"></script>
     </head>
     <body>
-        <a href="Home.html" id="logoContainer">
+        <a href="Home.php" id="logoContainer">
             <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
          </a>
         <section>

@@ -1,0 +1,245 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  width:100%;
+  top: 0;
+  right:0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 52);
+  box-shadow: 0px 1px 2px rgba(234, 126, 255, 0.5), 
+  0px 2px 4px rgba(234, 126, 255, 0.5), 
+  0px 4px 8px rgba(234, 126, 255, 0.5), 
+  0px 8px 16px rgba(234, 126, 255, 0.5);
+}
+
+body {
+  background-image: url("images/bgSRP.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo', sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 52);
+}
+
+#logoContainer {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 0 auto;
+
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn-group-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  text-align: center;
+}
+
+.btn-group-img:hover {
+  background-color: white;
+}
+
+.btn-label {
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.button-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-group-img {
+  width: 50px;
+  height: 50px;
+  background-color: #e4bbff;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.participants, .participants2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.participant-box {
+  width: 300px; /* Adjust the width as desired */
+  height: 200px; /* Adjust the height as desired */
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.participant-box img {
+  width: 200px; /* Adjust the width as desired */
+  height: 150px; /* Adjust the height as desired */
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.participant-box span {
+  padding: 5px 15px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: rgb(0, 0, 52);
+}
+
+#participant1, #participants4 {
+  margin-left: 25px;
+}
+
+.ssrpheader {
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto 20px;
+  padding: 10px;
+}
+
+.online-count {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #e4bbff;
+}
+
+.room-info {
+  display: flex;
+  align-items: center;
+}
+
+#room-name {
+  margin-right: 10px;
+  padding: 20px 50px;
+  background-color: aquamarine;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+#favorite-button {
+  background-color: #e4bbff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+#favorite-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.invite {
+  background-color: #e4bbff;
+  margin-right: 10px;
+  padding: 20px 50px;
+  border-radius: 15px;
+}
+
+#invite {
+  text-decoration: none;
+  color: black;
+}
+
+.invite:hover{
+  background-color: white;
+}
+
+#favorite-button:hover {
+  background-color: yellow;
+}
+
+.vertical-nav-bar {
+  background-color: rgb(0, 0, 52);
+  position: fixed;
+  width: 5%;
+  top: 0;
+  left: 0;
+  height: 100%; 
+  z-index: 999;  
+}
+
+#navList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 100px;
+}
+
+#navList li {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+#navList li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#navList li a:hover {
+  background-color: rgb(1, 1, 101);
+}
+
+#navList li a img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-bottom: 5px;
+}
+
+.arrowleft {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 120px ;
+  top: 45%;
+}
+
+.arrowright {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 80px ;
+  top: 45%;
+}
