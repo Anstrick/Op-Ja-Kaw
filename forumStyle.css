@@ -246,21 +246,37 @@ body{
     margin-right: 10px;
     font-family: 'Space Grotesk', sans-serif;
     color: white;
+    display:none;
   }
   
   .forum-searchbar input[type="text"] {
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
+    width:  500px;
+    height: 30px;
+    border-radius: 10px;
   }
-  
+  #search-forum-btn,
+  #add-forum-btn
+  {
+    padding: 10px;
+    background-color: aquamarine;
+    color:navy;
+    border-radius: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #search-forum-btn:hover,
+  #add-forum-btn:hover
+  {
+    background-color:#e9b5ff;
+    color:navy;
+  }
   #addforum-button {
     margin: -10px 10px 10px 10px;
   }
-  
-  #add-forum-btn {
-    display: block;
-  }
-  
   #random-forums {
     display: flex;
     padding: 20px;
@@ -269,75 +285,92 @@ body{
   
   .forum-box {
     border: 1px solid #ddd;
-    padding: 10px;
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 300px;
+    height: auto;
   }
   
   .forum-box img {
     width: 100%;
-    height: auto;
+    height: 150px;
     object-fit: cover;
-    margin-bottom: 10px;
+    background-color: #ccc;
   }
   
   .forum-box h2.forum-title {
+    padding: 20px;
+    padding-bottom: 0;
     margin-bottom: 5px;
     color: #333;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    color: navy;
+    text-align: left;
   }
   
   .forum-box p.forum-description {
-    margin-bottom: 10px;
-    color: #777;
+    margin-top: 2px;
+    color: #333;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    padding: 20px;
   }
   
   .forum-info {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding: 15px;
     margin-bottom: 5px;
-  }
-  
-  .forum-tags .tag-button {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #333;
   }
   
   .author-info {
     display: flex;
+    font-family: "Manrope", sans-serif;
     align-items: center;
-    margin-right: 10px;
   }
   
   .author-info img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-right: 5px;
+    margin-right: 15px;
+  }
+  
+  .author-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  .forum-date {
+    font-size: 12px;
+    color: gray;
+    margin: 0;
   }
   
   .reply-button {
     margin-top: auto;
-    background-color: #333;
-    color: #fff;
+    background-color: aquamarine;
+    color: navy;
+    width: 250px;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 10px auto;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
   }
   
   .reply-button:hover {
-    background-color: #555;
+    background-color:navy;
+    color:white;
   }
   
   

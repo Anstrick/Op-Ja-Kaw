@@ -75,15 +75,16 @@ $username = $_SESSION['user_name'];
         <!--Display Forums-->
         <div id="random-forums">
           <div class="forum-box">
-            <img src="Images/forum cv.jpg" alt="Forum Cover Image">
+            <img src="https://via.placeholder.com/" alt="Forum Cover Image">
             <h2 class="forum-title">Forum Title 1</h2>
             <p class="forum-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor dolor sed ex maximus, sed vestibulum libero dignissim.</p>
             <div class="forum-info">
               <div class="author-info">
                 <img src="https://via.placeholder.com/50" alt="Author Profile Image">
                 <p class="author-name">Author Name</p>
+                <p class="forum-date">3 weeks ago</p>
               </div>
-              <p class="forum-date">3 weeks ago</p>
+              
             </div>
             <button class="reply-button">Reply</button>
           </div>
