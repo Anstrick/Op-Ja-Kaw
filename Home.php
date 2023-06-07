@@ -27,20 +27,20 @@ $username = $_SESSION['user_name'];
     </head>
     <body>
         <header>
-            <a href="Home.html" id = "logoContainer">
+            <a href="Home.php" id = "logoContainer">
                 <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
                 <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
             </a>
             <ul class="navBar" id="navLinks">
                 <li><a href="srlanding.html">Study Rooms</a></li>
-                <li><a href="sflanding.html" class="sfButton">Study Forums <?php echo $username?></a></li>
+                <li><a href="sflanding.html" class="sfButton">Study Forums</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
          
 
             <div class="main">
-                <a href="loginpage.php" class="user">Hi</a>
-                <a href="signuppage.php" id="regButton"><?php echo $username?></a>
+                <a href="loginpage.php" class="user">Login</a>
+                <a href="signuppage.php" id="regButton">Register</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
         </header>
@@ -49,7 +49,7 @@ $username = $_SESSION['user_name'];
             <p id="intro">With our virtual study rooms, you can stay focused, 
                 motivated and connected with your peers. Join OP, JA KAW? now and take your 
                 studying to the next level </p>
-            <a id ="getstart" href="signuppage.html">Get Started</a>
+            <a id ="getstart" href="signuppage.php">Get Started</a>
         </div>
 
     <!--Description of Features-->
@@ -59,14 +59,14 @@ $username = $_SESSION['user_name'];
             </div>
             <div class="intro-container">
                 <div class="createSR">
-                    <a href="signuppage.html"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
+                    <a href="signuppage.php"><img src="Images/intro-cr.png" alt="intro-cr" id="intro-cr"></a>
                     <div class="intro-content">
                         <a id ="srf" href ="createroom.html">Create Study Rooms</a>
                         <p id = "createIntro">Design and Personalize Your Ideal Learning Space!</p>
                     </div>
                 </div>
                 <div class="joinSR">
-                    <a href="signuppage.html"><img src="Images/intro-jg.png" alt="intro-jg" id="intro-jg"></a>
+                    <a href="signuppage.php"><img src="Images/intro-jg.png" alt="intro-jg" id="intro-jg"></a>
                     <div class="intro-content">
                         <a id ="jsr" href ="srlanding.html">Join Study Spaces</a>
                         <p id ="joinIntro">Collaborate and Connect with Like-minded Learners in Dynamic Study Environments!</p>
@@ -74,14 +74,14 @@ $username = $_SESSION['user_name'];
                 </div>
 
                 <div class="postFR">
-                    <a href="signuppage.html"><img src="Images/intro-pf.png" alt="intro-pf" id="intro-pf"></a>
+                    <a href="signuppage.php"><img src="Images/intro-pf.png" alt="intro-pf" id="intro-pf"></a>
                     <div class="intro-content">
                         <a id ="sff" href ="sflanding.html">Post Forums</a>
                         <p id = "forumIntro">Spark Intellectual Conversations in our Forum Communities!</p>
                     </div>
                 </div>
             </div>
-            <a id ="tryNow" href="signuppage.html">Try it out!</a>
+            <a id ="tryNow" href="signuppage.php">Try it out!</a>
         </div>
     
         <!--Benefits-->
@@ -122,7 +122,7 @@ $username = $_SESSION['user_name'];
         <!--Join Now!-->
         <div class="joinNow">
             <h3 id="join"> Don't Wait, Join Now and Ignite Your Learning Journey!</h3>
-            <a id ="joinUS" href="signuppage.html">Join Now</a>
+            <a id ="joinUS" href="signuppage.php">Join Now</a>
         </div>
 
         <footer>

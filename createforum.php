@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 <?php
 
 session_start();
@@ -35,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 ?>
 
 <html>
+
 
     <head>
         <meta charset="utf-8">
@@ -88,7 +90,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	    </div>
         <div class="profile-button">
             <div class="profile-btn">
+
                 <img src="https://via.placeholder.com/60" alt="Profile Picture"> <!--needs to access database-->
+
                 <div class="dd-container">
                     <div class="dropdown-menu">
                         <ul>
