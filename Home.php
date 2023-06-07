@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$username = $_SESSION['user_name'];
+
+?>
+
+
 <!DOCTYPE html>
 
 <html>
@@ -21,14 +33,14 @@
             </a>
             <ul class="navBar" id="navLinks">
                 <li><a href="srlanding.html">Study Rooms</a></li>
-                <li><a href="sflanding.html" class="sfButton">Study Forums</a></li>
+                <li><a href="sflanding.html" class="sfButton">Study Forums <?php echo $username?></a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
          
 
             <div class="main">
-                <a href="loginpage.html" class="user">Sign In</a>
-                <a href="signuppage.html" id="regButton">Register</a>
+                <a href="loginpage.php" class="user">Hi</a>
+                <a href="signuppage.php" id="regButton"><?php echo $username?></a>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
         </header>
