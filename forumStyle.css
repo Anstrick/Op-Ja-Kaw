@@ -1006,3 +1006,16 @@ hr {
   margin-right: 10px;
   border-radius: 50%;
 }
+
+.other-forum-info {
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+#other-question {
+  margin-bottom: 5px; /* Adjust the margin as needed */
+}
+
+#other-post-info {
+  font-size: 12px; /* Adjust the font size as needed */
+  color: #888; /* Adjust the color as needed */
+}

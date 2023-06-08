@@ -29,7 +29,8 @@ $forum_id = $_GET['forum_id'];
 		//{
 
 			//save to database
-			$query = "insert into replies (forum_id, user_name, reply_content) values ('$forum_id','$username','$forum_reply')";
+			$query = "INSERT INTO replies (forum_id, user_name, reply_content) 
+                    VALUES ('$forum_id','$username','$forum_reply')";
             $conn -> query($query);
 
 			header("Location: specificforum.php?forum_id=".$forum_id);
@@ -112,14 +113,29 @@ $forum_id = $_GET['forum_id'];
             
             <div class="past-replies">
                 <p id="past-replieslabel">Other Replies</p>
+                
+                <?php
+                $sql = "SELECT * FROM replies WHERE forum_id = $forum_id"; // Exclude the current forum
+                $result = $conn->query($sql);
+                // Display each reply
+                while ($row = $result->fetch_assoc()) {
+                    $reply_username = $row["user_name"];
+                    $reply_content = $row["reply_content"];
+                    $reply_date = $row["date"];
+                ?>
+                
                 <div class="past-reply">
                     <div class="reply-info">
                         <img id="reply-profilepicture" src="Images/usericon.png">
-                        <p id="reply-name">Placeholder</p>
-                        <p id="reply-relativepostdate">N days ago </p>
+                        <p id="reply-name"><?php echo $reply_username; ?></p>
+                        <p id="reply-relativepostdate"><?php echo $reply_date; ?></p>
                     </div> 
-                    <p id="reply-text"> Hello betch</p>
+                    <p id="reply-text"><?php echo $reply_content; ?></p>
                 </div>
+                s
+                <?php
+                }
+                ?>
 
                 <hr>
             </div>
@@ -134,7 +150,7 @@ $forum_id = $_GET['forum_id'];
             // Display each forum as a separate div
             while ($row = $result->fetch_assoc()) {
                 $other_forum_title = $row["forum_title"];
-                $other_forum_content = $row["forum_content"];
+                //$other_forum_content = $row["forum_content"];
                 $other_forum_poster = $row["user_name"];
                 $other_forum_date = $row["date"];
                 $other_forum_id = $row["forum_id"];
@@ -142,9 +158,10 @@ $forum_id = $_GET['forum_id'];
             <a href="specificforum.php?forum_id=<?php echo $other_forum_id; ?>">
                 <div class="other-forum"> <!-- Start of individual forum -->
                     <img id="other-profilepicture" src="Images/usericon.png">
-                    <p id="other-question"><?php echo $other_forum_title; ?></p>
-                    <p><?php echo $other_forum_content; ?></p>
-                    <p>Posted by <?php echo $other_forum_poster; ?> on <?php echo $other_forum_date; ?></p>
+                    <div class="other-forum-info">
+                        <p id="other-question"><?php echo $other_forum_title; ?></p>
+                        <p id="other-post-info">Posted by <?php echo $other_forum_poster; ?> on <?php echo $other_forum_date; ?></p>
+                    </div>
                 </div> <!-- End of individual forum -->
             </a>
             <?php
