@@ -10,6 +10,7 @@ $username = $_SESSION['user_name'];
 ?>
 
 
+
 <!DOCTYPE html>
 
 <html>
@@ -24,6 +25,13 @@ $username = $_SESSION['user_name'];
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
         <script src="studyroomJS.js"></script>
+        <script>
+            function scrollToSection() {
+                // Scroll to the target element
+                const element = document.getElementById('scroll-target');
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
     </head>
     <body>
     <header>
@@ -63,11 +71,12 @@ $username = $_SESSION['user_name'];
             <p id="intro">With our virtual study rooms, you can stay focused, 
                 motivated and connected with your peers. Join OP, JA KAW? now and take your 
                 studying to the next level </p>
-            <a id ="getstart" href="signuppage.php">Get Started</a>
+            <!-- <a id ="getstart" href="signuppage.php">Get Started</a> -->
+            <button onclick="scrollToSection()" id="getstart">Get Started</button>
         </div>
 
     <!--Description of Features-->
-        <div class="introduction">
+        <div class="introduction"  id="scroll-target">
             <div class="intro-trigger">
                 <h2 class="introduce">Introducing <strong>OP, JA KAW?</strong></h2>
             </div>
