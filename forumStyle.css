@@ -689,6 +689,14 @@ body {
   margin-bottom: 20px;
 }
 
+#no-user{
+  color:white;
+  font-family: 'Manrope', sans-serif;
+}
+
+
+
+
 .forum-user-picture {
   margin-right: 10px;
   width: 80px;
@@ -699,11 +707,11 @@ body {
   margin-left: 10px;
 }
 
-.forum-user-picture img {
+#forum-pic {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .forum-time {
@@ -732,7 +740,7 @@ body {
 }
 /* Friends section */
 .profile-friends {
-  margin-top: 3vh;
+  margin-top: 2vh;
   margin-left: -5vw;
   display: flex;
   flex-direction: column;

@@ -146,7 +146,7 @@ $first_name = mysqli_fetch_assoc($user_data);
                         <?php
                             }
                         } else {
-                            echo "<p>No forum posts found.</p>";
+                            echo "<p id='no-user'> No forum posts found.</p>";
                         }
                         ?>
                     </div>
@@ -155,7 +155,7 @@ $first_name = mysqli_fetch_assoc($user_data);
             </div>
             <div class="friend-options">
                <div class="socialize-container">
-                <button id="gu-add">Add Friend</button><br>
+                
             </div>
                <!-- Friends section -->
                <div class="profile-friends">

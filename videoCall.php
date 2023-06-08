@@ -6,6 +6,10 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//   $room_name = $POST["room-name"];
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +41,7 @@ $username = $_SESSION['user_name'];
     <button id="join-btn">Join Stream</button>
 
     <div id="stream-wrapper">
-        <div id="room-title">Room Title</div> 
+        <div id="room-title"></div> 
         <div id="video-streams"></div>
         <div class="username" id="username"><?php echo $username?></div>
 

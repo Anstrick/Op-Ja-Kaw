@@ -123,12 +123,12 @@ $first_name = mysqli_fetch_assoc($user_data);
                         <?php echo '<a href="specificforum.php?forum_id='.$forum_id.'">';?>
                         <div class="userforum">
                             <div class="forum-user-picture">
-                                <p class="forum-time"><?php echo $forum_time; ?></p>
-                                <img src="<?php echo $profilePicture?>" alt="Profile Picture">
+                                <img src="<?php echo $profilePicture?>" id="forum-pic" alt="Profile Picture">
                             </div>
                             <div class="forum-content">
                                 <p class="forum-title"><?php echo $forum_title; ?></p>
                                 <p class="forum-text"><?php echo $forum_content; ?></p>
+                                <p class="forum-time"><?php echo $forum_time; ?></p>
                             </div>
                         </div>
                         <?php

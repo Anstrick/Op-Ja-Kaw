@@ -11,7 +11,11 @@ $username = $_SESSION['user_name'];
 
 $forum_id = $_GET['forum_id'];
 
-    $sql = "SELECT * FROM forum WHERE forum_id = $forum_id";
+    $sql = "SELECT * 
+            FROM forum 
+            RIGHT JOIN users 
+            ON forum.user_name = users.user_name 
+            WHERE forum_id = $forum_id";
     $result = $conn -> query($sql);
     $row = $result -> fetch_assoc();
 
@@ -19,6 +23,7 @@ $forum_id = $_GET['forum_id'];
     $post_title = $row["forum_title"];
     $post_content = $row["forum_content"];
     $post_date = $row["date"];
+    $post_picture = $row["profile_picture"];
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
@@ -40,7 +45,7 @@ $forum_id = $_GET['forum_id'];
 		//	echo "Please enter some valid information!";
 		//}
 	}
-    
+
 $selectQuery = "SELECT profile_picture FROM users WHERE user_name = '$username'";
 $selectResult = mysqli_query($conn, $selectQuery);
 
@@ -104,7 +109,7 @@ if ($selectResult && mysqli_num_rows($selectResult) > 0) {
                 <p id="main-forumtitle"><?php echo $post_title?></p> <!-- Forum Title -->
                 <div class="forum-question"> <!-- forum question -->
                     <div class="main-info">
-                        <img id="main-profilepicture" src="<?php echo $profilePicture?>">
+                        <img id="main-profilepicture" src="<?php echo $post_picture?>">
                         <p id="main-name"><?php echo $poster_username?></p>
                         <p id="main-relativepostdate" class="post-date"><?php echo $post_date?></p>
                     </div>
@@ -123,7 +128,11 @@ if ($selectResult && mysqli_num_rows($selectResult) > 0) {
                 <p id="past-replieslabel">Other Replies</p>
                 
                 <?php
-                $sql = "SELECT * FROM replies RIGHT JOIN users ON replies.user_name = users.user_name WHERE replies.forum_id = $forum_id"; // Exclude the current forum
+                $sql = "SELECT * 
+                        FROM replies 
+                        RIGHT JOIN users 
+                        ON replies.user_name = users.user_name 
+                        WHERE replies.forum_id = $forum_id"; // Exclude the current forum
 
                 $result = $conn->query($sql);
                 // Display each reply
