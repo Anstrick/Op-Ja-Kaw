@@ -129,47 +129,8 @@ $first_name = mysqli_fetch_assoc($user_data);
                         }
                         ?>
                     </div>
-
-                    <div class="section-content" id="created-rooms">
-                    <!-- Created rooms content here -->
-                    <div class="createdRoom-header">
-                        <div class="group-cover-photo">
-                            <img src="https://example.com/cover-photo.jpg" alt="Cover Photo">
-                        </div>
-                        <div class="room-info">
-                            <div class="room-picture">
-                                <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                        </div>
-                        <div class="room-details">
-                            <h2 id="room-name">Room Name</h2>
-                            <p id="userBio">Bio content here</p>
-                        </div>
                     </div>
-                      </div>
                     </div>
-                </div>
-
-                <h3 id="gu-lvr">Last Visited Rooms</h3>
-                <!-- Last visited room content here -->
-                <hr id="line">
-                <div class="lvr">
-                    <div class="createdRoom-header">
-                        <div class="group-cover-photo">
-                            <img src="https://example.com/cover-photo.jpg" alt="Cover Photo">
-                        </div>
-                        <div class="room-info">
-                            <div class="room-picture">
-                                <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                            </div>
-                            <div class="room-details">
-                                <h2 id="room-name">Room Name</h2>
-                                <p id="userBio">Bio content here</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
             </div>
             <div class="friend-options">
                 <div class="socialize-container">
