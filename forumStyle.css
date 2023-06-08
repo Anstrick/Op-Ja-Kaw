@@ -26,6 +26,10 @@ header {
   0px 8px 16px rgba(234, 126, 255, 0.5);
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;

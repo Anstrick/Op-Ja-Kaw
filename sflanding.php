@@ -72,23 +72,7 @@ $username = $_SESSION['user_name'];
       </div>
         <!--Display Forums-->
         <div class="random-forums">
-          <div class="forum-box">
-            <img src="https://via.placeholder.com/" alt="Forum Cover Image">
-            <h2 class="forum-title"></h2>
-            <p class="forum-description"></p>
-            <div class="forum-info">
-              <div class="author-info">
-                <img src="https://via.placeholder.com/50" alt="Author Profile Image">
-                <p class="author-name"></p>
-                <p class="forum-date"></p>
-              </div>
-            </div>
-            <button class="reply-button">Reply</button>
-          </div>
-    </body>
-</html>
-
-<?php 
+        <?php 
 $query = "SELECT * FROM forum"; // Assuming you have a table named "forums"
 $result = mysqli_query($conn, $query);
 
@@ -129,4 +113,9 @@ if ($result) {
 // Close the database connection
 mysqli_close($conn);
 ?>
+          </div>
+    </body>
+</html>
+
+
 
