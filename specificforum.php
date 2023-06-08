@@ -45,10 +45,10 @@ $forum_id = $_GET['forum_id'];
           </header>
           <div class="verticalNavBar">
               <ul id="navList">
-                <li><a id="verSRlanding" href="srlanding.html"><img src="Images/studyroom icon.png" alt="study room icon" id="sricon">Study Rooms</a></li>
+                <li><a id="verSRlanding" href="srlanding.php"><img src="Images/studyroom icon.png" alt="study room icon" id="sricon">Study Rooms</a></li>
                 <li><a id="verSFlanding" class="navigation2" href="sflanding.html"><img src="Images/forumicon.png" alt="forum icon" id="forumicon">Study Forums</a></li>
-                <li><a id="up" href="personalprofile.html"><img src="Images/usericon.png" alt="User icon" id="usericon">User<br>Profile</a></li>
-                <li><a id="logout" href="Home.html"><img src="Images/logouticon.png" alt="Log out icon" id="logouticon">Log out</a></li>
+                <li><a id="up" href="personalprofile.php"><img src="Images/usericon.png" alt="User icon" id="usericon">User<br>Profile</a></li>
+                <li><a id="logout" href="Home.php"><img src="Images/logouticon.png" alt="Log out icon" id="logouticon">Log out</a></li>
               </ul>
           </div>
         <div class="user-main">
