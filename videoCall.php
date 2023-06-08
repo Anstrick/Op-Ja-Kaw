@@ -36,20 +36,26 @@ $username = $_SESSION['user_name'];
 
     <button id="join-btn">Join Stream</button>
 
+    
+
     <div id="stream-wrapper">
+        <div id="room-title">Room Title</div> 
         <div id="video-streams"></div>
         <div class="username" id="username"><?php echo $username?></div>
 
         <div id="stream-controls">
-            <button id="leave-btn">
-              <i class="bx bx-log-out"></i> Leave Stream
-            </button>
-            <button id="mic-btn">
-              <i class="bx bx-microphone"></i> Mic On
-            </button>
-            <button id="camera-btn">
-              <i class="bx bx-camera"></i> Camera On
-            </button>
+          <button id="leave-btn">
+            <div class="icon-wrapper"><i class="bx bx-log-out"></i></div>
+            <div class="button-text">Leave Stream</div>
+          </button>
+          <button id="mic-btn">
+            <div class="icon-wrapper"><i class="bx bx-microphone"></i></div>
+            <div class="button-text">Mic On</div>
+          </button>
+          <button id="camera-btn">
+            <div class="icon-wrapper"><i class="bx bx-video"></i></div>
+            <div class="button-text">Camera</div>
+          </button>
         </div>
     </div>
     

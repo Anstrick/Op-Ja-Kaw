@@ -81,26 +81,32 @@ let leaveAndRemoveLocalStream = async () => {
 };
 
 let toggleMic = async (e) => {
+  const micIcon = e.currentTarget.querySelector('i');
   if (localTracks[0].muted) {
     await localTracks[0].setMuted(false);
-    e.target.innerHTML = '<i class="bx bxs-microphone"></i> Mic On';
-    e.target.style.backgroundColor = "cadetblue";
+    micIcon.classList.remove('bx-microphone-off');
+    micIcon.classList.add('bx-microphone');
+    e.target.style.backgroundColor = "rgb(240, 168, 255)";
   } else {
     await localTracks[0].setMuted(true);
-    e.target.innerHTML = '<i class="bx bx-microphone-off"></i> Mic Off';
-    e.target.style.backgroundColor = "#EE4B2B";
+    micIcon.classList.remove('bx-microphone');
+    micIcon.classList.add('bx-microphone-off');
+    e.target.style.backgroundColor = "#rgb(240, 168, 255)";
   }
 };
 
 let toggleCamera = async (e) => {
+  const cameraIcon = e.currentTarget.querySelector('i');
   if (localTracks[1].muted) {
     await localTracks[1].setMuted(false);
-    e.target.innerHTML = '<i class="bx bxs-video"></i> Camera On';
-    e.target.style.backgroundColor = "cadetblue";
+    cameraIcon.classList.remove('bx-video-off');
+    cameraIcon.classList.add('bx-video');
+    e.target.style.backgroundColor = "rgb(240, 168, 255)";
   } else {
     await localTracks[1].setMuted(true);
-    e.target.innerHTML = '<i class="bx bx-video-off"></i> Camera Off';
-    e.target.style.backgroundColor = "#EE4B2B";
+    cameraIcon.classList.remove('bx-video');
+    cameraIcon.classList.add('bx-video-off');
+    e.target.style.backgroundColor = "#rgb(240, 168, 255)";
   }
 };
 
