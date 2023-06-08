@@ -36,8 +36,6 @@ $username = $_SESSION['user_name'];
 
     <button id="join-btn">Join Stream</button>
 
-    
-
     <div id="stream-wrapper">
         <div id="room-title">Room Title</div> 
         <div id="video-streams"></div>
@@ -50,7 +48,7 @@ $username = $_SESSION['user_name'];
           </button>
           <button id="mic-btn">
             <div class="icon-wrapper"><i class="bx bx-microphone"></i></div>
-            <div class="button-text">Mic On</div>
+            <div class="button-text">Microphone</div>
           </button>
           <button id="camera-btn">
             <div class="icon-wrapper"><i class="bx bx-video"></i></div>

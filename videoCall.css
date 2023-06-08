@@ -221,9 +221,30 @@ button:hover {
 }
 
 
-@media screen and (max-width:1400px){
-  #video-streams{
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      width: 95%;
+@media screen and (max-width: 1400px) {
+  #video-streams {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #video-streams {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #video-streams {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #video-streams {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    width: 95%;
   }
 }
