@@ -114,8 +114,10 @@ $first_name = mysqli_fetch_assoc($user_data);
                                 $forum_title = $row["forum_title"];
                                 $forum_content = $row["forum_content"];
                                 $forum_time = $row["date"];
+                                $forum_id = $row["forum_id"];
                                 // $forum_picture = $row["picture_url"];
                         ?>
+                        <?php echo '<a href="specificforum.php?forum_id='.$forum_id.'">';?>
                         <div class="userforum">
                             <div class="forum-user-picture">
                                 <p class="forum-time"><?php echo $forum_time; ?></p>

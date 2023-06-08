@@ -98,7 +98,7 @@ $forum_id = $_GET['forum_id'];
                     <div class="main-info">
                         <img id="main-profilepicture" src="Images/usericon.png">
                         <p id="main-name"><?php echo $poster_username?></p>
-                        <p id="main-relativepostdate"><?php echo $post_date?></p>
+                        <p id="main-relativepostdate" class="post-date"><?php echo $post_date?></p>
                     </div>
                     <p id="main-question"><?php echo $post_content?>
                     </p>
