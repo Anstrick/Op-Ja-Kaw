@@ -127,27 +127,28 @@ $forum_id = $_GET['forum_id'];
         <div class="other-forums">
             <p id="other-forumslabel">Other forums</p>
             <?php
-                // Retrieve other forum data from the database
-                $sql = "SELECT * FROM forum WHERE forum_id <> $forum_id"; // Exclude the current forum
-                $result = $conn->query($sql);
+            // Retrieve other forum data from the database
+            $sql = "SELECT * FROM forum WHERE forum_id <> $forum_id"; // Exclude the current forum
+            $result = $conn->query($sql);
 
-                // Display each forum as a separate div
-                while ($row = $result->fetch_assoc()) {
-                    $other_forum_title = $row["forum_title"];
-                    $other_forum_content = $row["forum_content"];
-                    $other_forum_poster = $row["user_name"];
-                    $other_forum_date = $row["date"];
-                    $other_forum_id = $row["forum_id"];
-                
+            // Display each forum as a separate div
+            while ($row = $result->fetch_assoc()) {
+                $other_forum_title = $row["forum_title"];
+                $other_forum_content = $row["forum_content"];
+                $other_forum_poster = $row["user_name"];
+                $other_forum_date = $row["date"];
+                $other_forum_id = $row["forum_id"];
             ?>
             <a href="specificforum.php?forum_id=<?php echo $other_forum_id; ?>">
-                <img id="other-profilepicture" src="Images/usericon.png">
-                <p id="other-question"><?php echo $other_forum_title; ?></p>
-                <p><?php echo $other_forum_content; ?></p>
-                <p>Posted by <?php echo $other_forum_poster; ?> on <?php echo $other_forum_date; ?></p>
-                </div>
+                <div class="other-forum"> <!-- Start of individual forum -->
+                    <img id="other-profilepicture" src="Images/usericon.png">
+                    <p id="other-question"><?php echo $other_forum_title; ?></p>
+                    <p><?php echo $other_forum_content; ?></p>
+                    <p>Posted by <?php echo $other_forum_poster; ?> on <?php echo $other_forum_date; ?></p>
+                </div> <!-- End of individual forum -->
+            </a>
             <?php
-                }
+            }
             ?>
         </div>
       </div>
