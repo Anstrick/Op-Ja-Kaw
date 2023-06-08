@@ -11,7 +11,7 @@ if (!$conn = mysqli_connect($dbhost, $dbuser, $dbpass)) {
 
 $create_db = "CREATE DATABASE IF NOT EXISTS opjakaw";
 if ($conn->query($create_db) === TRUE) {
-    echo "Database created successfully<br>";
+    echo "HULAAAAT<br>";
 } else {
     die("Error creating database: " . $conn->error);
 }
@@ -22,7 +22,6 @@ if (!$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)) {
 
 $create_table = "CREATE TABLE IF NOT EXISTS users (
     id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT(20) NOT NULL,
     user_name VARCHAR(30) NOT NULL,
     password VARCHAR(255) NOT NULL,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -31,8 +30,32 @@ $create_table = "CREATE TABLE IF NOT EXISTS users (
     last_name VARCHAR(30) NOT NULL
 )";
 
+if (!$conn->query($create_table)){
+    die("Error creating table: " . $conn->error);
+}
+
+$create_table = "CREATE TABLE IF NOT EXISTS forum (
+    forum_id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(30) NOT NULL,
+    forum_title VARCHAR(255) NOT NULL,
+    forum_content VARCHAR(255) NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
 if (!$conn->query($create_table)) {
     die("Error creating table: " . $conn->error);
 }
+
+// $create_table = "CREATE TABLE IF NOT EXISTS person (
+//     forum_id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     user_name VARCHAR(30) NOT NULL,
+//     forum_title VARCHAR(255) NOT NULL,
+//     forum_content VARCHAR(255) NOT NULL,
+//     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+// )";
+
+// if (!$conn->query($create_table)) {
+//     die("Error creating table: " . $conn->error);
+// }
 
 ?>

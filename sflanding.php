@@ -24,17 +24,17 @@ $username = $_SESSION['user_name'];
       </head>
     <body>
         <header>  
-          <a href="Home.html" id = "logoContainer">
+          <a href="Home.php" id = "logoContainer">
             <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
             <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
         </a>
         </header>
 	    <div class="verticalNavBar">
             <ul id="navList">
-              <li><a id="verSRlanding" href="srlanding.html"><img src="Images/studyroom icon.png" alt="study room icon" id="sricon">Study Rooms</a></li>
-              <li><a id="verSFlanding" class="navigation2" href="sflanding.html"><img src="Images/forumicon.png" alt="forum icon" id="forumicon">Study Forums</a></li>
-              <li><a id="up" href="personalprofile.html"><img src="Images/usericon.png" alt="User icon" id="usericon">User<br>Profile</a></li>
-              <li><a id="logout" href="Home.html"><img src="Images/logouticon.png" alt="Log out icon" id="logouticon">Log out</a></li>
+              <li><a id="verSRlanding" href="srlanding.php"><img src="Images/studyroom icon.png" alt="study room icon" id="sricon">Study Rooms</a></li>
+              <li><a id="verSFlanding" class="navigation2" href="sflanding.php"><img src="Images/forumicon.png" alt="forum icon" id="forumicon">Study Forums</a></li>
+              <li><a id="up" href="personalprofile.php"><img src="Images/usericon.png" alt="User icon" id="usericon">User<br>Profile</a></li>
+              <li><a id="logout" href="Home.php"><img src="Images/logouticon.png" alt="Log out icon" id="logouticon">Log out</a></li>
             </ul>
 	    </div>
       <div class="user-main">
@@ -46,7 +46,7 @@ $username = $_SESSION['user_name'];
                     <h3 id="user-name"><?php echo $username?></h3>
                 </div>
                 <ul>
-                    <li><a href="personalprofile.html">Profile</a></li>
+                    <li><a href="personalprofile.php">Profile</a></li>
                     <li><a href="#">Settings</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
@@ -67,7 +67,7 @@ $username = $_SESSION['user_name'];
             <button id="search-forum-btn">Search</button>  
           </div>  
           <div id="addforum-button">
-            <a href="createforum.html"><button id="add-forum-btn">Add Forum</button></a>
+            <a href="createforum.php"><button id="add-forum-btn">Add Forum</button></a>
           </div>
         </div>
       </div>
@@ -75,20 +75,16 @@ $username = $_SESSION['user_name'];
         <!--Display Forums-->
         <div id="random-forums">
           <div class="forum-box">
-            <img src="Images/forum cv.jpg" alt="Forum Cover Image">
+            <img src="https://via.placeholder.com/" alt="Forum Cover Image">
             <h2 class="forum-title">Forum Title 1</h2>
             <p class="forum-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor dolor sed ex maximus, sed vestibulum libero dignissim.</p>
             <div class="forum-info">
-              <div class="forum-tags">
-                <button class="tag-button">Tag1</button>
-                <button class="tag-button">Tag2</button>
-                <button class="tag-button">Tag3</button>
-              </div>
               <div class="author-info">
                 <img src="https://via.placeholder.com/50" alt="Author Profile Image">
                 <p class="author-name">Author Name</p>
+                <p class="forum-date">3 weeks ago</p>
               </div>
-              <p class="forum-date">3 weeks ago</p>
+              
             </div>
             <button class="reply-button">Reply</button>
           </div>

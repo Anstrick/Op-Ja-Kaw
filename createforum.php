@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+
+
 <?php
 
 session_start();
@@ -7,11 +10,44 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
+if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$username = $_SESSION['user_name'];
+		$forum_title = $_POST['forum-name'];
+		$forum_content = $_POST['forum-description'];
+
+		if(!empty($forum_title) && !empty($forum_content))
+		{
+
+			//save to database
+			$query = "insert into forum (user_name, forum_title, forum_content) values ('$username','$forum_title','$forum_content')";
+            
+            // $forum_id = mysqli_insert_id($conn);
+            if ($conn -> query($query) === TRUE) {
+                $last_id = $conn -> insert_id;
+                echo "Last inserted id: " . $last_id;
+            }
+
+                //$sql = "SELECT * FROM forum where forum_title = $forum_title";
+                
+                //$result = $conn->query($sql);
+                //$row = $result->fetch_assoc();
+                //$forum_id = $row['forum_id'];
+
+			header("Location: specificforum.php?forum_id=".$last_id);
+			die;
+		}else
+		{
+			echo "Please enter some valid information!";
+		}
+	}
+
 ?>
 
-<!DOCTYPE html>
-
 <html>
+
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +100,9 @@ $username = $_SESSION['user_name'];
 	    </div>
         <div class="profile-button">
             <div class="profile-btn">
-                <img src="https://via.placeholder.com/60" alt="Profile Picture">
+
+                <img src="https://via.placeholder.com/60" alt="Profile Picture"> <!--needs to access database-->
+
                 <div class="dd-container">
                     <div class="dropdown-menu">
                         <ul>
@@ -79,7 +117,7 @@ $username = $_SESSION['user_name'];
 		<div class="createForum-page">
 			<div class="createForumBx">
 				<a id = "cf-close-btn" href="sflanding.html">X</button></a>
-				<form class="create-forum-form">
+				<form class="create-forum-form" method="post">
 					<h2 id="cflabel">Start Discussing</h2>
 					<div class ="cfform-container">
 						<label for="forum-name" id="fn">Forum Title:</label>
