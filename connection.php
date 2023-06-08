@@ -27,7 +27,8 @@ $create_table = "CREATE TABLE IF NOT EXISTS users (
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     email VARCHAR(30) UNIQUE,
     first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL
+    last_name VARCHAR(30) NOT NULL,
+    profile_picture VARCHAR(255) NOT NULL
 )";
 
 if (!$conn->query($create_table)){
@@ -61,10 +62,8 @@ if (!$conn->query($create_table)) {
 // $create_table = "CREATE TABLE IF NOT EXISTS user_data (
 //     user_id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 //     id BIGINT(20),
-//     first_name VARCHAR(30) NOT NULL,
-//     last_name VARCHAR(30) NOT NULL,
-//     profile_pic
-//     cover_pic
+//     profile_pic VARCHAR(255) NOT NULL,
+//     cover_pic VARCHAR(255) NOT NULL
 // )";
 
 // if (!$conn->query($create_table)){

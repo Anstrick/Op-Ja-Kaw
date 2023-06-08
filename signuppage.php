@@ -13,15 +13,70 @@ session_start();
 		$email = $_POST['email'];
 		$first_name = $_POST['first_name'];
 		$last_name = $_POST['last_name'];
+        $file = $_FILES["profile_picture"];
 
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
+                if (isset($_FILES["profile_picture"]) && isset($_FILES["cover_photo"])) {
+                    $file = $_FILES["profile_picture"];
+
+                    // Retrieve file details
+                    $fileName = $file["name"];
+                    $fileTmp = $file["tmp_name"];
+                    $fileSize = $file["size"];
+                    $fileError = $file["error"];
+
+                    // Determine the file extension
+                    $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+
+                    // Valid file extensions
+                    $allowedExtensions = ["jpg", "jpeg", "png"];
+
+                    // Check if the file has a valid extension
+                    if (in_array($fileExt, $allowedExtensions)) {
+                        // Generate a unique filename to prevent collisions
+                        $newFileName = uniqid('', true) . "." . $fileExt;
+
+                        // Set the destination path to store the uploaded image
+                        $destination = "Images/" . $newFileName;
+
+                        // Move the uploaded file to the destination path
+                        if (move_uploaded_file($fileTmp, $destination)) {
+                            // File upload successful
+                            // Save the image path in the database
+                            // Perform your database query to insert the user data, including the image path, into the appropriate table and columns
+                            // For example:
+                            // $sql = "INSERT INTO users (profile_picture) VALUES ('$destination')";
+                            // $conn -> query($sql);
+                            $user_id = random_num(20);
+                            $query = "INSERT INTO users (user_id,user_name,password,email,first_name,last_name, profile_picture) 
+                                    VALUES ('$user_id','$username','$password','$email','$first_name','$last_name', '$destination')";
+
+                            mysqli_query($conn, $query);
+
+                            // Display a success message to the user
+                            echo "Signup successful!";
+                        } else {
+                            // Error occurred while moving the file
+                            echo "Error uploading the profile picture.";
+                        }
+                    } else {
+                        // Invalid file extension
+                        echo "Invalid file extension. Only JPG, JPEG, and PNG files are allowed.";
+                    }
+                } else {
+                    // No profile picture was uploaded
+                    echo "Please select a profile picture.";
+                }
+            }
+
 
 			//save to database
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password,email,first_name,last_name) values ('$user_id','$username','$password','$email','$first_name','$last_name')";
+			// $user_id = random_num(20);
+			// $query = "INSERT INTO users (user_id,user_name,password,email,first_name,last_name) 
+            //         VALUES ('$user_id','$username','$password','$email','$first_name','$last_name')";
 
-			mysqli_query($conn, $query);
+			// mysqli_query($conn, $query);
 
 			header("Location: loginpage.php");
 			die;
@@ -29,7 +84,7 @@ session_start();
 		{
 			echo "Please enter some valid information!";
 		}
-	}
+	
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +114,8 @@ session_start();
             <div class="contentBx">
                 <div class="signupBox">
                     <h2>Create Account</h2>
-                    <form method="post" enctype="multipart/form-data" action="upload.php">
+
+                    <form method="post" enctype="multipart/form-data" action="signuppage.php">
                         <div class="inputBx nameBx">
                             <div class="name-container">
                                 <span>First Name</span>
@@ -87,11 +143,10 @@ session_start();
                             <input type="password" name="" placeholder="Confirm Password">
                         </div>
                         <div class="inputBx">
-                            <input type="file" name="profile_pic">Choose Profile Picture
+                            <label for="profile_pic">Choose Profile Photo</label>
+                            <input type="file" name="profile_picture">
                         </div>
-                        <div class="inputBx">
-                            <input type="file" name="cover_pic">Choose Cover Photo</input>
-                        </div>
+                    
                         <div class="inputBx">
                             <input type="submit" value="Sign Up" name="">
                         </div>
