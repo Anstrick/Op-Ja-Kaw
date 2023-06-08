@@ -7,8 +7,22 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
-$sql = "SELECT * FROM forum WHERE user_name = '$username'";
+$sql = "SELECT * 
+        FROM forum
+        WHERE user_name = '$username'";
 $result = $conn->query($sql);
+
+$sqli = "SELECT * 
+        FROM users
+        WHERE user_name <> '$username'";
+$friends = $conn->query($sqli);
+
+$sqlie = "SELECT first_name 
+        FROM users
+        WHERE user_name = '$username'";
+
+$user_data = mysqli_query($conn, $sqlie);
+$first_name = mysqli_fetch_assoc($user_data);
 
 ?>
 
@@ -73,7 +87,7 @@ $result = $conn->query($sql);
                     </div>
                     <div class="profile-details">
                         <h2 id="userName"><?php echo $username?></h2>
-                        <p id="userBio">Bio content here</p>
+                        <p id="userBio"><?php echo $first_name['first_name']?></p>
                         <div class="genuser-tags">
                         <button class="gu-tag">Tag1</button>
                         <button class="gu-tag">Tag2</button>
@@ -179,22 +193,31 @@ $result = $conn->query($sql);
                     </a>
                 </div>
                 <!-- Friends section -->
-            <div class="profile-friends">
-            <h3 id="friends-title">Friends</h3>
-            <div class="friends-container">
-            <div class="friend-info">
-            <div class="friend-picture">
-            <img src="https://via.placeholder.com/200" alt="Profile Picture">
-            </div>
-            <p class="friend-name">Friend Name</p>
-            </div>
-            <div class="friend-info">
-            <div class="friend-picture">
-            <img src="https://via.placeholder.com/200" alt="Profile Picture">
-            </div>
-            <p class="friend-name">Friend Name</p>
-            </div>
-            </div>
-            </div>
+                <div class="profile-friends">
+                    <h3 id="friends-title">Friends</h3>
+                    <div class="friends-container">
+                        <?php
+                        // Check if there are any registered users
+                        if ($friends->num_rows > 0) {
+                        // Loop through each user and display their information
+                        while ($row = $friends->fetch_assoc()) {
+                            $friendName = $row["user_name"];
+                            //$friendPicture = $row["profile_picture"];
+                        ?>
+                        <div class="friend-info">
+                        <div class="friend-picture">
+                            <!-- <img src="<?php echo $friendPicture; ?>" alt="Profile Picture"> -->
+                        </div>
+                        <p class="friend-name"><?php echo $friendName; ?></p>
+                        </div>
+                        <?php
+                        }
+                        } else {
+                        // Display a message if there are no registered users
+                        echo "<p>No registered users found.</p>";
+                        }
+                        ?>
+                    </div>
+                </div>
     </body>
 </html>
