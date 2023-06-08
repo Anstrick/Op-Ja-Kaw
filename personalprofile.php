@@ -95,7 +95,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                 <div class="section-container">
                     <div class="forum-posts-section">
                     <button class="section-button active" data-section="forum-posts">Forum Posts</button>
-                    <button class="section-button" data-section="created-rooms">Created Rooms</button>
                     </div>
                     <hr id="line">
 
