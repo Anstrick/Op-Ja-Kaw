@@ -94,22 +94,22 @@ $username = $_SESSION['user_name'];
                 <div class="dax">
                     <p class="devName">Gabriel Dax Agura</p>
                     <p class="devEmail">gpagura@up.edu.ph</p>
-                    <p class="teamdesc">description</p>
+                    <p class="teamdesc">Scrum Master</p>
                 </div>
                 <div class="benz">
                     <p class="devName">Benz Vrianne Beleber</p>
                     <p class="devEmail">bpbeleber@up.edu.ph</p>
-                    <p class="teamdesc">description</p>
+                    <p class="teamdesc">Member</p>
                 </div>
                 <div class="perse">
                     <p class="devName">Perserose Catalan</p>
                     <p class="devEmail">ppcatalan@up.edu.ph</p>
-                    <p class="teamdesc">description</p>
+                    <p class="teamdesc">Member</p>
                 </div>
                 <div class="gab">
                     <p class="devName">Gabriel Joshua Carreon</p>
                     <p class="devEmail">gmcarreon@up.edu.ph</p>
-                    <p class="teamdesc">description</p>
+                    <p class="teamdesc">Member</p>
                  </div>
             </div>
         </div>
