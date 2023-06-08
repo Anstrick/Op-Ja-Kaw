@@ -14,6 +14,28 @@ $result = $conn->query($sql);
 
 
 <!DOCTYPE html>
+
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_id = $_GET['user_id'];
+
+    $sql = "SELECT * FROM users WHERE id = $user_id";
+    $result = $conn -> query($sql);
+    $row = $result -> fetch_assoc();
+
+    $username = $row["user_name"];
+
+    //DATA OBTAINED FROM NEW TABLE FROM EDITED PROFILE PAGE
+    //bio
+    //profile picture
+
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
