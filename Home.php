@@ -145,7 +145,7 @@ $username = $_SESSION['user_name'];
         <!--Join Now!-->
         <div class="joinNow">
             <h3 id="join"> Don't Wait, Join Now and Ignite Your Learning Journey!</h3>
-            <a id ="joinUS" href="signuppage.php">Join Now</a>
+            <a id ="joinUS" href="srlanding.php">Join Now</a>
         </div>
 
         <footer>

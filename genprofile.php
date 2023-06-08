@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$username = $_SESSION['user_name'];
+
+$sql = "SELECT * FROM forum WHERE user_name = '$username'";
+$result = $conn->query($sql);
+
+?>
+
+
 <!DOCTYPE html>
 
 <?php
@@ -37,17 +52,17 @@ $user_id = $_GET['user_id'];
     </head>
     <body>
         <header>  
-            <a href="Home.html" id = "logoContainer">
+            <a href="Home.php" id = "logoContainer">
               <img src="Images/op-logo.gif" alt="Animated Logo" id="animatedLogo">
               <img src="Images/Ops-logo-png.png" alt="Static Logo" id="staticLogo">
           </a>
           </header>
           <div class="verticalNavBar">
               <ul id="navList">
-                <li><a id="verSRlanding" href="srlanding.html"><img src="Images/studyroom icon.png" alt="study room icon" id="sricon">Study Rooms</a></li>
-                <li><a id="verSFlanding" class="navigation2" href="sflanding.html"><img src="Images/forumicon.png" alt="forum icon" id="forumicon">Study Forums</a></li>
-                <li><a id="up" href="personalprofile.html"><img src="Images/usericon.png" alt="User icon" id="usericon">User<br>Profile</a></li>
-                <li><a id="logout" href="Home.html"><img src="Images/logouticon.png" alt="Log out icon" id="logouticon">Log out</a></li>
+                <li><a id="verSRlanding" href="srlanding.php"><img src="Images/studyroom icon.png" alt="study room icon" id="sricon">Study Rooms</a></li>
+                <li><a id="verSFlanding" class="navigation2" href="sflanding.php"><img src="Images/forumicon.png" alt="forum icon" id="forumicon">Study Forums</a></li>
+                <li><a id="up" href="personalprofile.php"><img src="Images/usericon.png" alt="User icon" id="usericon">User<br>Profile</a></li>
+                <li><a id="logout" href="logout.php"><img src="Images/logouticon.png" alt="Log out icon" id="logouticon">Log out</a></li>
               </ul>
           </div>
         <div class="user-main">
@@ -59,9 +74,9 @@ $user_id = $_GET['user_id'];
                       <h3 id="user-name">User Name</h3>
                   </div>
                   <ul>
-                      <li><a href="personalprofile.html">Profile</a></li>
+                      <li><a href="personalprofile.php">Profile</a></li>
                       <li><a href="#">Settings</a></li>
-                      <li><a href="Home.html">Logout</a></li>
+                      <li><a href="logout.php">Logout</a></li>
                   </ul>
               </div>
           </div>
