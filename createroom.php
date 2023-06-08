@@ -52,7 +52,6 @@ $username = $_SESSION['user_name'];
                         </div>
                         <ul>
                             <li><a href="personalprofile.php">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </div>
@@ -71,7 +70,6 @@ $username = $_SESSION['user_name'];
                     <div class="dropdown-menu">
                         <ul>
                             <li><a href="personalprofile.php">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </div>

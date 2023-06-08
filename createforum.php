@@ -86,7 +86,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                         </div>
                         <ul>
                             <li><a href="personalprofile.html">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </div>
@@ -107,7 +106,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                     <div class="dropdown-menu">
                         <ul>
                             <li><a href="personalprofile.html">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                     </div>

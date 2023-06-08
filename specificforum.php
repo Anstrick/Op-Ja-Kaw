@@ -81,7 +81,6 @@ $forum_id = $_GET['forum_id'];
                   </div>
                   <ul>
                       <li><a href="personalprofile.php">Profile</a></li>
-                      <li><a href="#">Settings</a></li>
                       <li><a href="Home.php">Logout</a></li>
                   </ul>
               </div>

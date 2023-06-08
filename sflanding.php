@@ -47,7 +47,6 @@ $username = $_SESSION['user_name'];
                 </div>
                 <ul>
                     <li><a href="personalprofile.php">Profile</a></li>
-                    <li><a href="#">Settings</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
@@ -71,23 +70,21 @@ $username = $_SESSION['user_name'];
           </div>
         </div>
       </div>
-
         <!--Display Forums-->
-        <!-- <div id="random-forums">
+        <div class="random-forums">
           <div class="forum-box">
             <img src="https://via.placeholder.com/" alt="Forum Cover Image">
-            <h2 class="forum-title">Forum Title 1</h2>
-            <p class="forum-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor dolor sed ex maximus, sed vestibulum libero dignissim.</p>
+            <h2 class="forum-title"></h2>
+            <p class="forum-description"></p>
             <div class="forum-info">
               <div class="author-info">
                 <img src="https://via.placeholder.com/50" alt="Author Profile Image">
-                <p class="author-name">Author Name</p>
-                <p class="forum-date">3 weeks ago</p>
+                <p class="author-name"></p>
+                <p class="forum-date"></p>
               </div>
-              
             </div>
             <button class="reply-button">Reply</button>
-          </div> -->
+          </div>
     </body>
 </html>
 
