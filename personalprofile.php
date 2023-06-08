@@ -86,28 +86,95 @@ $username = $_SESSION['user_name'];
                     <button class="section-button active" data-section="forum-posts">Forum Posts</button>
                     <button class="section-button" data-section="created-rooms">Created Rooms</button>
                     </div>
+                    <hr id="line">
                     <div class="section-content" id="forum-posts">
                     <!-- Forum posts content here -->
+                      <div class="userforum">
+                      <div class="forum-user-picture">
+                        <p class="forum-time">Time</p>
+                        <img src="https://via.placeholder.com/200" alt="Profile Picture">
+                      </div>
+                      <div class="forum-content">
+                        <p class="forum-title">TITLE</p>
+                        <p class="forum-text">fillerfillerfillerfillerfillerfillerfillerfillerfillerfiller</p>
+                      </div>
+                    </div>
+
                     </div>
                     <div class="section-content" id="created-rooms">
                     <!-- Created rooms content here -->
+                    <div class="createdRoom-header">
+                        <div class="group-cover-photo">
+                            <img src="https://example.com/cover-photo.jpg" alt="Cover Photo">
+                        </div>
+                        <div class="room-info">
+                            <div class="room-picture">
+                                <img src="https://via.placeholder.com/200" alt="Profile Picture">
+                        </div>
+                        <div class="room-details">
+                            <h2 id="room-name">Room Name</h2>
+                            <p id="userBio">Bio content here</p>
+                            <div class="genuser-tags">
+                                <button class="gu-tag">Tag1</button>
+                                <button class="gu-tag">Tag2</button>
+                                <button class="gu-tag">Tag3</button>
+                            </div>
+                        </div>
+                    </div>
+                      </div>
                     </div>
                 </div>
+
                 <h3 id="gu-lvr">Last Visited Rooms</h3>
                 <!-- Last visited room content here -->
+                <hr id="line">
+                <div class="lvr">
+                    <div class="createdRoom-header">
+                        <div class="group-cover-photo">
+                            <img src="https://example.com/cover-photo.jpg" alt="Cover Photo">
+                        </div>
+                        <div class="room-info">
+                            <div class="room-picture">
+                                <img src="https://via.placeholder.com/200" alt="Profile Picture">
+                            </div>
+                            <div class="room-details">
+                                <h2 id="room-name">Room Name</h2>
+                                <p id="userBio">Bio content here</p>
+                                <div class="genuser-tags">
+                                <button class="gu-tag">Tag1</button>
+                                <button class="gu-tag">Tag2</button>
+                                <button class="gu-tag">Tag3</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 </div>
             </div>
-            <section class="friend-options">
+            <div class="friend-options">
                 <div class="socialize-container">
-                <button id="gu-add">Add Friend</button><br>
-                <button id="gu-send">Send Message</button>
+                    <a href="createroom.php">
+                        <button id="gu-create">Create Rooms</button>
+                    </a>
                 </div>
                 <!-- Friends section -->
-                <div class="profile-friends">
-                <h3 id="gu-friends">Friends</h3>
-                <!-- Friends content here -->
-                </div>
+            <div class="profile-friends">
+            <h3 id="friends-title">Friends</h3>
+            <div class="friends-container">
+            <div class="friend-info">
+            <div class="friend-picture">
+            <img src="https://via.placeholder.com/200" alt="Profile Picture">
             </div>
-          </div>
+            <p class="friend-name">Friend Name</p>
+            </div>
+            <div class="friend-info">
+            <div class="friend-picture">
+            <img src="https://via.placeholder.com/200" alt="Profile Picture">
+            </div>
+            <p class="friend-name">Friend Name</p>
+            </div>
+            </div>
+            </div>
     </body>
 </html>
