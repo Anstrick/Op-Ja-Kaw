@@ -17,7 +17,7 @@ session_start();
 
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
-                if (isset($_FILES["profile_picture"]) && isset($_FILES["cover_photo"])) {
+                if (isset($_FILES["profile_picture"])) {
                     $file = $_FILES["profile_picture"];
 
                     // Retrieve file details
@@ -49,8 +49,8 @@ session_start();
                             // $sql = "INSERT INTO users (profile_picture) VALUES ('$destination')";
                             // $conn -> query($sql);
                             $user_id = random_num(20);
-                            $query = "INSERT INTO users (user_id,user_name,password,email,first_name,last_name, profile_picture) 
-                                    VALUES ('$user_id','$username','$password','$email','$first_name','$last_name', '$destination')";
+                            $query = "INSERT INTO users (user_name,password,email,first_name,last_name, profile_picture) 
+                                    VALUES ('$username','$password','$email','$first_name','$last_name', '$destination')";
 
                             mysqli_query($conn, $query);
 
