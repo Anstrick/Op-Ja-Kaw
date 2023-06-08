@@ -117,7 +117,7 @@ if ($result) {
         echo '<p class="forum-date">' . $forumDate . '</p>';
         echo '</div>';
         echo '</div>';
-        echo '<button class="reply-button">Reply</button>';
+        echo '<a href="specificforum.php?forum_id='.$forumid.'"><button class="reply-button">Reply</button></a>';
         echo '</div>';
     }
 
@@ -131,4 +131,4 @@ if ($result) {
 // Close the database connection
 mysqli_close($conn);
 ?>
-?>
+
