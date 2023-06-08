@@ -725,6 +725,7 @@ body {
 .forum-text {
   font-size: 14px;
   color: #333;
+  font-family: 'Manrope',sans-serif;
 }
 /* Friends section */
 .profile-friends {
@@ -736,6 +737,7 @@ body {
   border-radius: 5px;
   padding: 1vw;
   width: 20vw;
+  background-color: white;;
 }
 
 .friends-container {
@@ -745,7 +747,7 @@ body {
 
 #friends-title {
   margin-bottom: 1vh;
-  color: white;
+  color: navy;
   font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -798,6 +800,12 @@ body {
 /* Personal Profile */
 .friend-picture {
   margin-right: 10px;
+}
+
+.friend-picture a{
+  margin-right: 10px;
+  color:white;
+  text-decoration: none;
 }
 
 .friend-picture img {
