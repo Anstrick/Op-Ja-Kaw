@@ -17,7 +17,7 @@ $username = $_SESSION['user_name'];
         <meta charset="utf-8">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Study Rooms</title>
+        <title>Create Room</title>
         <link rel="icon" type="image/png" href="favicon_io/favicon.ico">
         <link rel="stylesheet" type="text/css" href="createRoomStyle.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -88,16 +88,11 @@ $username = $_SESSION['user_name'];
                         <input type="text" id="room-name" name="room-name" required>
                     </div>
                     <div class="crform-container">
-                        
-                      
                     </div>
                     <div class="crform-container">
                         <label for="room-description" id="rd">Room Description:</label>
                         <textarea id="room-description" name="room-description" required></textarea>
                     </div>
-                    <div class="crform-container">
-                        
-                        <div id="tagsContainer"></div>
                     </div>
                     <input type="submit" value="Create Room" class="cr-submit"> 
 	            </form>

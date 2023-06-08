@@ -127,11 +127,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 						<label for="forum-description" id="fd">Content:</label>
 						<textarea id="forum-description" name="forum-description" placeholder="Write your content here..." required></textarea>
 					</div>
-                   <div class="cfform-container">
-                        <label for="tags" id="tags">Tags:</label>
-                        <input type="text" id="tagsInput" name="tags" placeholder="Type a tag and press Enter" >
-                        <div id="tagsContainer"></div>
-                    </div>
 					<input type="submit" value="Post to Forum" class="cf-submit">
 				</form>
 			</div>

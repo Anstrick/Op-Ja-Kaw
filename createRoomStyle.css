@@ -288,44 +288,6 @@ body {
     margin-top: 5px;
   }
 
-  input[type="number"]{
-    color: white;
-    font-family: 'Wix Madefor Display', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    width: fit-content;
-    padding: 10px;
-    border: 2px solid #ccc;
-    background:transparent;
-    border-radius: 50px;
-    margin-top: 5px;
-  }
-
-#tags{
-    display: block;
-    font-weight: bold;
-    color: white;
-    font-family: 'Wix Madefor Display', sans-serif;
-    font-size: 15px;
-    padding: 2px;
-    letter-spacing: 1px;
-    margin-top: 1px;
-}
-
-#tagsInput{
-    color: white;
-    font-family: 'Wix Madefor Display', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    background:transparent;
-    border-radius: 50px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-  
 input,textarea{
     transition: box-shadow 0.5s ease;
 }
