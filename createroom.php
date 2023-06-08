@@ -8,6 +8,15 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
+$selectQuery = "SELECT profile_picture FROM users WHERE user_name = '$username'";
+$selectResult = mysqli_query($conn, $selectQuery);
+
+if ($selectResult && mysqli_num_rows($selectResult) > 0) {
+    // Fetch the row and retrieve the profile_picture value
+    $row = mysqli_fetch_assoc($selectResult);
+    $profilePicture = $row['profile_picture'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +52,7 @@ $username = $_SESSION['user_name'];
             </div>
 
             <div class="user-main">
-                <img src="https://via.placeholder.com/60" alt="Profile Picture" id="userMenu">
+                <img src="<?php echo $profilePicture ?>" alt="Profile Picture" id="userMenu">
                 <div class="profile-button" id="profileBtn">
                     <div class="sub-profile">
                         <div class="user-info">
