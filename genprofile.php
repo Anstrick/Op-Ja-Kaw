@@ -38,8 +38,6 @@ $first_name = mysqli_fetch_assoc($user_data);
 
 
 ?>
-
-
 <!DOCTYPE html>
 
 <html>
@@ -81,7 +79,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                   </div>
                   <ul>
                       <li><a href="personalprofile.php">Profile</a></li>
-                      <li><a href="#">Settings</a></li>
                       <li><a href="logout.php">Logout</a></li>
                   </ul>
               </div>
@@ -111,7 +108,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                 <div class="section-container">
                     <div class="forum-posts-section">
                     <button class="section-button active" data-section="forum-posts">Forum Posts</button>
-                    <button class="section-button" data-section="created-rooms">Created Rooms</button>
                     </div>
                     <hr id="line">
 
@@ -141,67 +137,16 @@ $first_name = mysqli_fetch_assoc($user_data);
                         <?php
                             }
                         } else {
-                            // Display a message if there are no forum posts by the user
                             echo "<p>No forum posts found.</p>";
                         }
                         ?>
                     </div>
-
-                    <div class="section-content" id="created-rooms">
-                    <!-- Created rooms content here -->
-                    <div class="createdRoom-header">
-                        <div class="group-cover-photo">
-                            <img src="https://example.com/cover-photo.jpg" alt="Cover Photo">
-                        </div>
-                        <div class="room-info">
-                            <div class="room-picture">
-                                <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                            </div>
-                            <div class="room-details">
-                                <h2 id="room-name">Room Name</h2>
-                                <p id="userBio">Bio content here</p>
-                                <div class="genuser-tags">
-                                    <button class="gu-tag">Tag1</button>
-                                    <button class="gu-tag">Tag2</button>
-                                    <button class="gu-tag">Tag3</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     </div>
-                </div>
-
-                <h3 id="gu-lvr">Last Visited Rooms</h3>
-                <!-- Last visited room content here -->
-                <hr id="line">
-                <div class="lvr">
-                    <div class="createdRoom-header">
-                        <div class="group-cover-photo">
-                            <img src="https://example.com/cover-photo.jpg" alt="Cover Photo">
-                        </div>
-                        <div class="room-info">
-                            <div class="room-picture">
-                                <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                            </div>
-                            <div class="room-details">
-                                <h2 id="room-name">Room Name</h2>
-                                <p id="userBio">Bio content here</p>
-                                <div class="genuser-tags">
-                                <button class="gu-tag">Tag1</button>
-                                <button class="gu-tag">Tag2</button>
-                                <button class="gu-tag">Tag3</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
             </div>
             <div class="friend-options">
                <div class="socialize-container">
                 <button id="gu-add">Add Friend</button><br>
-                <button id="gu-send">Send Message</button>
             </div>
                <!-- Friends section -->
                <div class="profile-friends">
