@@ -116,7 +116,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         </div>
 		<div class="createForum-page">
 			<div class="createForumBx">
-				<a id = "cf-close-btn" href="sflanding.html">X</button></a>
+				<a id = "cf-close-btn" href="sflanding.php">X</button></a>
 				<form class="create-forum-form" method="post">
 					<h2 id="cflabel">Start Discussing</h2>
 					<div class ="cfform-container">
