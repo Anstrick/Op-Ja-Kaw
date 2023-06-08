@@ -106,6 +106,7 @@ if ($result) {
         $forumid = $row['forum_id'];
 
         // Generate the HTML markup for the forum
+        echo '<a href="specificforum.php?forum_id='.$forumid.'">';
         echo '<div class="forum-box">';
         echo '<img src="https://via.placeholder.com/" alt="Forum Cover Image">';
         echo '<h2 class="forum-title">' . $forumTitle . '</h2>';
