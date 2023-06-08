@@ -58,16 +58,17 @@ if (!$conn->query($create_table)) {
     die("Error creating table: " . $conn->error);
 }
 
-$create_table = "CREATE TABLE IF NOT EXISTS friends (
-    forum_id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_name VARCHAR(30) NOT NULL,
-    forum_title VARCHAR(255) NOT NULL,
-    forum_content VARCHAR(255) NOT NULL,
-    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)";
+// $create_table = "CREATE TABLE IF NOT EXISTS user_data (
+//     user_id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     id BIGINT(20),
+//     first_name VARCHAR(30) NOT NULL,
+//     last_name VARCHAR(30) NOT NULL,
+//     profile_pic
+//     cover_pic
+// )";
 
-if (!$conn->query($create_table)) {
-    die("Error creating table: " . $conn->error);
-}
+// if (!$conn->query($create_table)){
+//     die("Error creating table: " . $conn->error);
+// }
 
 ?>

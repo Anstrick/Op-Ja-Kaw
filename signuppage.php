@@ -59,7 +59,7 @@ session_start();
             <div class="contentBx">
                 <div class="signupBox">
                     <h2>Create Account</h2>
-                    <form method="post">
+                    <form method="post" enctype="multipart/form-data" action="upload.php">
                         <div class="inputBx nameBx">
                             <div class="name-container">
                                 <span>First Name</span>
@@ -85,6 +85,12 @@ session_start();
                         <div class="inputBx">
                             <span>Confirm Password</span>
                             <input type="password" name="" placeholder="Confirm Password">
+                        </div>
+                        <div class="inputBx">
+                            <input type="file" name="profile_pic">Choose Profile Picture
+                        </div>
+                        <div class="inputBx">
+                            <input type="file" name="cover_pic">Choose Cover Photo</input>
                         </div>
                         <div class="inputBx">
                             <input type="submit" value="Sign Up" name="">

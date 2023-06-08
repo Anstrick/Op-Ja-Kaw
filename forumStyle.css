@@ -886,10 +886,15 @@ body {
   font-weight: bold;
   font-size: 20px;
 }
+.post-date {
+  margin-left: 10px; /* Adjust the margin value as per your preference */
+}
 
 #main-relativepostdate {
-  margin-left: auto;
+  margin-left: 5%;
 }
+
+
 
 #main-question {
   margin-top: 10px;
