@@ -40,7 +40,16 @@ $forum_id = $_GET['forum_id'];
 		//	echo "Please enter some valid information!";
 		//}
 	}
+    
+$selectQuery = "SELECT profile_picture FROM users WHERE user_name = '$username'";
+$selectResult = mysqli_query($conn, $selectQuery);
 
+if ($selectResult && mysqli_num_rows($selectResult) > 0) {
+    // Fetch the row and retrieve the profile_picture value
+    $row = mysqli_fetch_assoc($selectResult);
+    $profilePicture = $row['profile_picture'];
+}
+    
 ?>
 
 <html>
@@ -72,11 +81,11 @@ $forum_id = $_GET['forum_id'];
               </ul>
           </div>
         <div class="user-main">
-          <img src="https://via.placeholder.com/60" alt="Profile Picture" id="userMenu">
+          <img src="<?php echo $profilePicture?>" alt="Profile Picture" id="userMenu">
           <div class="profile-button" id="profileBtn">
               <div class="sub-profile">
                   <div class="user-info">
-                      <img src="https://via.placeholder.com/60" alt="Profile Picture">
+                      <img src="<?php echo $profilePicture?>" alt="Profile Picture">
                       <h3 id="user-name">User Name</h3>
                   </div>
                   <ul>
@@ -95,7 +104,7 @@ $forum_id = $_GET['forum_id'];
                 <p id="main-forumtitle"><?php echo $post_title?></p> <!-- Forum Title -->
                 <div class="forum-question"> <!-- forum question -->
                     <div class="main-info">
-                        <img id="main-profilepicture" src="Images/usericon.png">
+                        <img id="main-profilepicture" src="<?php echo $profilePicture?>">
                         <p id="main-name"><?php echo $poster_username?></p>
                         <p id="main-relativepostdate" class="post-date"><?php echo $post_date?></p>
                     </div>
@@ -105,7 +114,7 @@ $forum_id = $_GET['forum_id'];
             </div>
 
             <form class="reply-proper" method="post">
-                <img id="user-profilepicture" src="Images/usericon.png"> <!-- user profile picture -->
+                <img id="user-profilepicture" src="<?php echo $profilePicture?>"> <!-- user profile picture -->
                 <input type="text" id="user-reply" name="forum_reply" placeholder="Post your reply to the forum.." required><!-- reply field -->
                 <input type="submit" id="reply-button" value="Post reply"> <!-- reply button -->
             </form>
@@ -114,18 +123,20 @@ $forum_id = $_GET['forum_id'];
                 <p id="past-replieslabel">Other Replies</p>
                 
                 <?php
-                $sql = "SELECT * FROM replies WHERE forum_id = $forum_id"; // Exclude the current forum
+                $sql = "SELECT * FROM replies RIGHT JOIN users ON replies.user_name = users.user_name WHERE replies.forum_id = $forum_id"; // Exclude the current forum
+
                 $result = $conn->query($sql);
                 // Display each reply
                 while ($row = $result->fetch_assoc()) {
                     $reply_username = $row["user_name"];
                     $reply_content = $row["reply_content"];
                     $reply_date = $row["date"];
+                    $reply_picture = $row["profile_picture"];
                 ?>
                 
                 <div class="past-reply">
                     <div class="reply-info">
-                        <img id="reply-profilepicture" src="Images/usericon.png">
+                        <img id="reply-profilepicture" src="<?php echo $reply_picture?>">
                         <p id="reply-name"><?php echo $reply_username; ?></p>
                         <p id="reply-relativepostdate"><?php echo $reply_date; ?></p>
                     </div> 
@@ -143,7 +154,9 @@ $forum_id = $_GET['forum_id'];
             <p id="other-forumslabel">Other forums</p>
             <?php
             // Retrieve other forum data from the database
-            $sql = "SELECT * FROM forum WHERE forum_id <> $forum_id"; // Exclude the current forum
+            $sql = "SELECT * FROM forum
+                    INNER JOIN users
+                    ON forum.user_name = users.user_name WHERE forum_id <> $forum_id"; // Exclude the current forum
             $result = $conn->query($sql);
 
             // Display each forum as a separate div
@@ -153,10 +166,11 @@ $forum_id = $_GET['forum_id'];
                 $other_forum_poster = $row["user_name"];
                 $other_forum_date = $row["date"];
                 $other_forum_id = $row["forum_id"];
+                $other_profile_picture = $row["profile_picture"];
             ?>
             <a href="specificforum.php?forum_id=<?php echo $other_forum_id; ?>">
                 <div class="other-forum"> <!-- Start of individual forum -->
-                    <img id="other-profilepicture" src="Images/usericon.png">
+                    <img id="other-profilepicture" src="<?php echo $other_profile_picture?>">
                     <div class="other-forum-info">
                         <p id="other-question"><?php echo $other_forum_title; ?></p>
                         <p id="other-post-info">Posted by <?php echo $other_forum_poster; ?> on <?php echo $other_forum_date; ?></p>

@@ -32,6 +32,15 @@ $sqlie = "SELECT first_name
         FROM users
         WHERE user_name = '$friend_username'";
 
+$selectQuery = "SELECT profile_picture FROM users WHERE user_name = '$username'";
+$selectResult = mysqli_query($conn, $selectQuery);
+
+if ($selectResult && mysqli_num_rows($selectResult) > 0) {
+    // Fetch the row and retrieve the profile_picture value
+    $row = mysqli_fetch_assoc($selectResult);
+    $profilePicture = $row['profile_picture'];
+}
+
 $user_data = mysqli_query($conn, $sqlie);
 $first_name = mysqli_fetch_assoc($user_data);
 
@@ -70,11 +79,11 @@ $first_name = mysqli_fetch_assoc($user_data);
               </ul>
           </div>
         <div class="user-main">
-          <img src="https://via.placeholder.com/60" alt="Profile Picture" id="userMenu">
+          <img src="<?php echo $profilePicture?>" alt="Profile Picture" id="userMenu">
           <div class="profile-button" id="profileBtn">
               <div class="sub-profile">
                   <div class="user-info">
-                      <img src="https://via.placeholder.com/60" alt="Profile Picture">
+                      <img src="<?php echo $profilePicture?>" alt="Profile Picture">
                       <h3 id="user-name">User Name</h3>
                   </div>
                   <ul>
@@ -95,7 +104,7 @@ $first_name = mysqli_fetch_assoc($user_data);
                     </div>
                     <div class="profile-info">
                     <div class="profile-picture">
-                        <img src="https://via.placeholder.com/200" alt="Profile Picture">
+                        <img src="<?php echo $profilePicture?>" alt="Profile Picture">
                     </div>
                     <div class="profile-details">
                         <h2 id="userName"><?php echo $friend_username?></h2>
@@ -127,7 +136,7 @@ $first_name = mysqli_fetch_assoc($user_data);
                         <div class="userforum">
                             <div class="forum-user-picture">
                                 <p class="forum-time"><?php echo $forum_time; ?></p>
-                                <img src="<?php echo $forum_picture; ?>" alt="Profile Picture">
+                                <img src="<?php echo $profilePicture?>" alt="Profile Picture">
                             </div>
                             <div class="forum-content">
                                 <p class="forum-title"><?php echo $forum_title; ?></p>
@@ -158,11 +167,11 @@ $first_name = mysqli_fetch_assoc($user_data);
                         // Loop through each user and display their information
                         while ($row = $friends->fetch_assoc()) {
                             $friendName = $row["user_name"];
-                            //$friendPicture = $row["profile_picture"];
+                            $friendPicture = $row["profile_picture"];
                     ?>
                     <div class="friend-info">
                         <div class="friend-picture">
-                            <!-- <img src="<?php echo $friendPicture; ?>" alt="Profile Picture"> -->
+                            <img src="<?php echo $friendPicture; ?>" alt="Profile Picture">
                         </div>
                         <a href="genprofile.php?friendName=<?php echo $friendName; ?>"><?php echo $friendName; ?></a>
                     </div>

@@ -124,7 +124,7 @@ $first_name = mysqli_fetch_assoc($user_data);
                         <div class="userforum">
                             <div class="forum-user-picture">
                                 <p class="forum-time"><?php echo $forum_time; ?></p>
-                                <img src="<?php echo $forum_picture; ?>" alt="Profile Picture">
+                                <img src="<?php echo $profilePicture?>" alt="Profile Picture">
                             </div>
                             <div class="forum-content">
                                 <p class="forum-title"><?php echo $forum_title; ?></p>
@@ -158,11 +158,11 @@ $first_name = mysqli_fetch_assoc($user_data);
                         // Loop through each user and display their information
                         while ($row = $friends->fetch_assoc()) {
                             $friendName = $row["user_name"];
-                            //$friendPicture = $row["profile_picture"];
+                            $friendPicture = $row["profile_picture"];
                     ?>
                     <div class="friend-info">
                         <div class="friend-picture">
-                            <!-- <img src="<?php echo $friendPicture; ?>" alt="Profile Picture"> -->
+                            <img src="<?php echo $friendPicture?>" alt="Profile Picture">
                         </div>
                         <a href="genprofile.php?friendName=<?php echo $friendName; ?>"><?php echo $friendName; ?></a>
                     </div>

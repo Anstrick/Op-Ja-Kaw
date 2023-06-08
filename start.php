@@ -11,8 +11,6 @@ $sql = "SELECT * FROM users WHERE user_name = '$username'";
     $result = $conn -> query($sql);
     $row = $result -> fetch_assoc();
 
-    $user_pp = $row["profile_picture"];
-    echo $user_pp;
 
 ?>
 

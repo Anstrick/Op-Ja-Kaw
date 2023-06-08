@@ -11,9 +11,15 @@ $sql = "SELECT * FROM users WHERE user_name = '$username'";
     $result = $conn -> query($sql);
     $row = $result -> fetch_assoc();
 
-    $user_pp = $row["profile_picture"];
-    echo $user_pp;
+$selectQuery = "SELECT profile_picture FROM users WHERE user_name = '$username'";
+$selectResult = mysqli_query($conn, $selectQuery);
 
+if ($selectResult && mysqli_num_rows($selectResult) > 0) {
+    // Fetch the row and retrieve the profile_picture value
+    $row = mysqli_fetch_assoc($selectResult);
+    $profilePicture = $row['profile_picture'];
+}
+    
 ?>
 
 <!DOCTYPE html>
@@ -45,11 +51,11 @@ $sql = "SELECT * FROM users WHERE user_name = '$username'";
             </ul>
 	    </div>
       <div class="user-main">
-        <img src=<?php echo $user_pp ?> alt="Profile Picture" id="userMenu">
+        <img src=<?php echo $profilePicture?> alt="Profile Picture" id="userMenu">
         <div class="profile-button" id="profileBtn">
             <div class="sub-profile">
                 <div class="user-info">
-                    <img src= <?php echo $user_pp ?> alt="Profile Picture">
+                    <img src= <?php echo $profilePicture?> alt="Profile Picture">
                     <h3 id="user-name"><?php echo $username?></h3>
                 </div>
                 <ul>
@@ -80,7 +86,9 @@ $sql = "SELECT * FROM users WHERE user_name = '$username'";
         <!--Display Forums-->
         <div class="random-forums">
         <?php 
-$query = "SELECT * FROM forum"; // Assuming you have a table named "forums"
+$query = "SELECT * FROM forum
+      INNER JOIN users
+      ON forum.user_name = users.user_name"; // Assuming you have a table named "forums"
 $result = mysqli_query($conn, $query);
 
 // Check if the query was successful
@@ -92,6 +100,7 @@ if ($result) {
         $authorName = $row['user_name'];
         $forumDate = $row['date'];
         $forumid = $row['forum_id'];
+        $forum_pic = $row['profile_picture'];
 
         // Generate the HTML markup for the forum
         echo '<a href="specificforum.php?forum_id='.$forumid.'">';
@@ -101,7 +110,7 @@ if ($result) {
         echo '<p class="forum-description">' . $forumDescription . '</p>';
         echo '<div class="forum-info">';
         echo '<div class="author-info">';
-        echo '<img src="https://via.placeholder.com/50" alt="Author Profile Image">';
+        echo '<img src='.$forum_pic.' alt="Author Profile Image">';
         echo '<p class="author-name">' . $authorName . '</p>';
         echo '<p class="forum-date">' . $forumDate . '</p>';
         echo '</div>';

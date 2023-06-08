@@ -11,9 +11,15 @@ $sql = "SELECT * FROM users WHERE user_name = '$username'";
     $result = $conn -> query($sql);
     $row = $result -> fetch_assoc();
 
-    $user_pp = $row["profile_picture"];
-    echo $user_pp;
 
+$selectQuery = "SELECT profile_picture FROM users WHERE user_name = '$username'";
+$selectResult = mysqli_query($conn, $selectQuery);
+
+if ($selectResult && mysqli_num_rows($selectResult) > 0) {
+    // Fetch the row and retrieve the profile_picture value
+    $row = mysqli_fetch_assoc($selectResult);
+    $profilePicture = $row['profile_picture'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +58,7 @@ $sql = "SELECT * FROM users WHERE user_name = '$username'";
                 <div class="profile-button" id="profileBtn">
                     <div class="sub-profile">
                         <div class="user-info">
-                            <img src= <?php echo $user_pp ?> alt="Profile Picture">
+                            <img src= "<?php echo $user_pp ?>" alt="Profile Picture">
                             <h3 id="user-name"><?php echo $username?></h3>
                         </div>
                         <ul>
