@@ -7,6 +7,9 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
+$sql = "SELECT * FROM forum WHERE user_name = '$username'";
+$result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -87,20 +90,37 @@ $username = $_SESSION['user_name'];
                     <button class="section-button" data-section="created-rooms">Created Rooms</button>
                     </div>
                     <hr id="line">
+
                     <div class="section-content" id="forum-posts">
-                    <!-- Forum posts content here -->
-                      <div class="userforum">
-                      <div class="forum-user-picture">
-                        <p class="forum-time">Time</p>
-                        <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                      </div>
-                      <div class="forum-content">
-                        <p class="forum-title">TITLE</p>
-                        <p class="forum-text">fillerfillerfillerfillerfillerfillerfillerfillerfillerfiller</p>
-                      </div>
+                        <?php
+                        // Check if there are any forum posts by the user
+                        if ($result->num_rows > 0) {
+                            // Loop through each forum post and display them
+                            while ($row = $result->fetch_assoc()) {
+                                $forum_title = $row["forum_title"];
+                                $forum_content = $row["forum_content"];
+                                $forum_time = $row["date"];
+                                // $forum_picture = $row["picture_url"];
+                        ?>
+                        <div class="userforum">
+                            <div class="forum-user-picture">
+                                <p class="forum-time"><?php echo $forum_time; ?></p>
+                                <img src="<?php echo $forum_picture; ?>" alt="Profile Picture">
+                            </div>
+                            <div class="forum-content">
+                                <p class="forum-title"><?php echo $forum_title; ?></p>
+                                <p class="forum-text"><?php echo $forum_content; ?></p>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        } else {
+                            // Display a message if there are no forum posts by the user
+                            echo "<p>No forum posts found.</p>";
+                        }
+                        ?>
                     </div>
 
-                    </div>
                     <div class="section-content" id="created-rooms">
                     <!-- Created rooms content here -->
                     <div class="createdRoom-header">
