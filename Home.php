@@ -7,6 +7,12 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
+$sql = "SELECT * FROM users WHERE user_name = '$username'";
+    $result = $conn -> query($sql);
+    $row = $result -> fetch_assoc();
+
+    $user_pp = $row["profile_picture"];
+    echo $user_pp;
 ?>
 
 
@@ -50,11 +56,11 @@ $username = $_SESSION['user_name'];
             </div>
     
             <div class="user-main">
-                <img src="https://via.placeholder.com/60" alt="Profile Picture" id="userMenu">
+                <img src=<?php echo $user_pp ?> alt="Profile Picture" id="userMenu">
                 <div class="profile-button" id="profileBtn">
                     <div class="sub-profile">
                         <div class="user-info">
-                            <img src="https://via.placeholder.com/60" alt="Profile Picture">
+                            <img src= <?php echo $user_pp ?> alt="Profile Picture">
                             <h3 id="user-name"><?php echo $username?></h3>
                         </div>
                         <ul>
