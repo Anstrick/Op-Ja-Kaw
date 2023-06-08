@@ -103,11 +103,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                     <div class="profile-details">
                         <h2 id="userName"><?php echo $friend_username?></h2>
                         <p id="userBio"><?php echo $first_name['first_name']?></p>
-                        <div class="genuser-tags">
-                        <button class="gu-tag">Tag1</button>
-                        <button class="gu-tag">Tag2</button>
-                        <button class="gu-tag">Tag3</button>
-                        </div>
                     </div>
                     </div>
                 </div>

@@ -66,7 +66,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                   </div>
                   <ul>
                       <li><a href="personalprofile.php">Profile</a></li>
-                      <li><a href="#">Settings</a></li>
                       <li><a href="logout.php">Logout</a></li>
                   </ul>
               </div>
@@ -88,11 +87,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                     <div class="profile-details">
                         <h2 id="userName"><?php echo $username?></h2>
                         <p id="userBio"><?php echo $first_name['first_name']?></p>
-                        <div class="genuser-tags">
-                        <button class="gu-tag">Tag1</button>
-                        <button class="gu-tag">Tag2</button>
-                        <button class="gu-tag">Tag3</button>
-                        </div>
                     </div>
                     </div>
                 </div>
@@ -150,11 +144,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                         <div class="room-details">
                             <h2 id="room-name">Room Name</h2>
                             <p id="userBio">Bio content here</p>
-                            <div class="genuser-tags">
-                                <button class="gu-tag">Tag1</button>
-                                <button class="gu-tag">Tag2</button>
-                                <button class="gu-tag">Tag3</button>
-                            </div>
                         </div>
                     </div>
                       </div>
@@ -176,11 +165,6 @@ $first_name = mysqli_fetch_assoc($user_data);
                             <div class="room-details">
                                 <h2 id="room-name">Room Name</h2>
                                 <p id="userBio">Bio content here</p>
-                                <div class="genuser-tags">
-                                <button class="gu-tag">Tag1</button>
-                                <button class="gu-tag">Tag2</button>
-                                <button class="gu-tag">Tag3</button>
-                                </div>
                             </div>
                         </div>
                     </div>
