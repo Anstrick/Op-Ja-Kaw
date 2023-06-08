@@ -263,11 +263,11 @@ body {
   margin: 0 auto 2% auto;
   padding: 12px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   width: 50%;
-  
 }
+
 
 .studyOption > div {
   flex-basis: 45%;
@@ -281,8 +281,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.studyOption > div.createRoom img,
-.searchRoom #sricon {
+.studyOption > div.createRoom img {
   width: 200px;
   height: auto;
   margin: 0 auto;
@@ -335,10 +334,6 @@ body {
         flex-basis: 100%;
       }
     
-    .searchRoom {
-      flex-basis: 100%;
-      width: auto;
-    }
   }
   
 /*------------Search Study Room Style------------*/
