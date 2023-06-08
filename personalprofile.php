@@ -195,29 +195,28 @@ $first_name = mysqli_fetch_assoc($user_data);
                 <!-- Friends section -->
                 <div class="profile-friends">
                     <h3 id="friends-title">Friends</h3>
-                    <div class="friends-container">
-                        <?php
-                        // Check if there are any registered users
-                        if ($friends->num_rows > 0) {
+                <div class="friends-container">
+                    <?php
+                    // Check if there are any registered users
+                    if ($friends->num_rows > 0) {
                         // Loop through each user and display their information
                         while ($row = $friends->fetch_assoc()) {
                             $friendName = $row["user_name"];
                             //$friendPicture = $row["profile_picture"];
-                        ?>
-                        <div class="friend-info">
+                    ?>
+                    <div class="friend-info">
                         <div class="friend-picture">
                             <!-- <img src="<?php echo $friendPicture; ?>" alt="Profile Picture"> -->
                         </div>
-                        <p class="friend-name"><?php echo $friendName; ?></p>
-                        </div>
-                        <?php
+                        <a href="genprofile.php?friendName=<?php echo $friendName; ?>"><?php echo $friendName; ?></a>
+                    </div>
+                    <?php
                         }
-                        } else {
+                    } else {
                         // Display a message if there are no registered users
                         echo "<p>No registered users found.</p>";
-                        }
-                        ?>
-                    </div>
+                    }
+                    ?>
                 </div>
     </body>
 </html>

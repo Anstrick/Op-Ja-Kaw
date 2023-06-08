@@ -7,34 +7,40 @@ include("functions.php");
 
 $username = $_SESSION['user_name'];
 
-$sql = "SELECT * FROM forum WHERE user_name = '$username'";
+if(isset($_GET['friendName'])){
+    $friend_username = $_GET['friendName'];
+    
+    echo "Friend Name: " . $friend_username;
+} else {
+    // Handle the case when the friendName parameter is not provided
+    echo "Friend Name not found.";
+}
+
+
+$sql = "SELECT * 
+        FROM forum
+        WHERE user_name = '$friend_username'";
 $result = $conn->query($sql);
+
+$sqli = "SELECT * 
+        FROM users
+        WHERE user_name <> '$username' 
+        AND user_name <> '$friend_username'";
+$friends = $conn->query($sqli);
+
+$sqlie = "SELECT first_name 
+        FROM users
+        WHERE user_name = '$friend_username'";
+
+$user_data = mysqli_query($conn, $sqlie);
+$first_name = mysqli_fetch_assoc($user_data);
+
+
 
 ?>
 
 
 <!DOCTYPE html>
-
-<?php
-
-session_start();
-
-include("connection.php");
-include("functions.php");
-
-$user_id = $_GET['user_id'];
-
-    $sql = "SELECT * FROM users WHERE id = $user_id";
-    $result = $conn -> query($sql);
-    $row = $result -> fetch_assoc();
-
-    $username = $row["user_name"];
-
-    //DATA OBTAINED FROM NEW TABLE FROM EDITED PROFILE PAGE
-    //bio
-    //profile picture
-
-?>
 
 <html>
     <head>
@@ -95,8 +101,8 @@ $user_id = $_GET['user_id'];
                         <img src="https://via.placeholder.com/200" alt="Profile Picture">
                     </div>
                     <div class="profile-details">
-                        <h2 id="userName"><?php echo $username?></h2>
-                        <p id="userBio">Bio content here</p>
+                        <h2 id="userName"><?php echo $friend_username?></h2>
+                        <p id="userBio"><?php echo $first_name['first_name']?></p>
                         <div class="genuser-tags">
                         <button class="gu-tag">Tag1</button>
                         <button class="gu-tag">Tag2</button>
@@ -113,20 +119,37 @@ $user_id = $_GET['user_id'];
                     <button class="section-button" data-section="created-rooms">Created Rooms</button>
                     </div>
                     <hr id="line">
-                    <div class="section-content" id="forum-posts">
-                    <!-- Forum posts content here -->
-                      <div class="userforum">
-                      <div class="forum-user-picture">
-                        <p class="forum-time">Time</p>
-                        <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                      </div>
-                      <div class="forum-content">
-                        <p class="forum-title">TITLE</p>
-                        <p class="forum-text">fillerfillerfillerfillerfillerfillerfillerfillerfillerfiller</p>
-                      </div>
-                    </div>
 
+                    <div class="section-content" id="forum-posts">
+                        <?php
+                        // Check if there are any forum posts by the user
+                        if ($result->num_rows > 0) {
+                            // Loop through each forum post and display them
+                            while ($row = $result->fetch_assoc()) {
+                                $forum_title = $row["forum_title"];
+                                $forum_content = $row["forum_content"];
+                                $forum_time = $row["date"];
+                                // $forum_picture = $row["picture_url"];
+                        ?>
+                        <div class="userforum">
+                            <div class="forum-user-picture">
+                                <p class="forum-time"><?php echo $forum_time; ?></p>
+                                <img src="<?php echo $forum_picture; ?>" alt="Profile Picture">
+                            </div>
+                            <div class="forum-content">
+                                <p class="forum-title"><?php echo $forum_title; ?></p>
+                                <p class="forum-text"><?php echo $forum_content; ?></p>
+                            </div>
+                        </div>
+                        <?php
+                            }
+                        } else {
+                            // Display a message if there are no forum posts by the user
+                            echo "<p>No forum posts found.</p>";
+                        }
+                        ?>
                     </div>
+                    
                     <div class="section-content" id="created-rooms">
                     <!-- Created rooms content here -->
                     <div class="createdRoom-header">
@@ -183,23 +206,31 @@ $user_id = $_GET['user_id'];
                 <button id="gu-add">Add Friend</button><br>
                 <button id="gu-send">Send Message</button>
             </div>
-                <!-- Friends section -->
-            <div class="profile-friends">
-                <h3 id="friends-title">Friends</h3>
+               <!-- Friends section -->
+               <div class="profile-friends">
+                    <h3 id="friends-title">Friends</h3>
                 <div class="friends-container">
+                    <?php
+                    // Check if there are any registered users
+                    if ($friends->num_rows > 0) {
+                        // Loop through each user and display their information
+                        while ($row = $friends->fetch_assoc()) {
+                            $friendName = $row["user_name"];
+                            //$friendPicture = $row["profile_picture"];
+                    ?>
                     <div class="friend-info">
                         <div class="friend-picture">
-                            <img src="https://via.placeholder.com/200" alt="Profile Picture">
+                            <!-- <img src="<?php echo $friendPicture; ?>" alt="Profile Picture"> -->
                         </div>
-                        <p class="friend-name">Friend Name</p>
+                        <a href="genprofile.php?friendName=<?php echo $friendName; ?>"><?php echo $friendName; ?></a>
                     </div>
-                    <div class="friend-info">
-                        <div class="friend-picture">
-                            <img src="https://via.placeholder.com/200" alt="Profile Picture">
-                        </div>
-                            <p class="friend-name">Friend Name</p>
-                    </div>
+                    <?php
+                        }
+                    } else {
+                        // Display a message if there are no registered users
+                        echo "<p>No registered users found.</p>";
+                    }
+                    ?>
                 </div>
-            </div>
     </body>
 </html>
