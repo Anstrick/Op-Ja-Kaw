@@ -19,7 +19,26 @@ $forum_id = $_GET['forum_id'];
     $post_title = $row["forum_title"];
     $post_content = $row["forum_content"];
     $post_date = $row["date"];
-                            
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$username = $_SESSION['user_name'];
+		$forum_reply = $_POST['forum_reply'];
+		//if(!empty($forum_reply))
+		//{
+
+			//save to database
+			$query = "insert into replies (forum_id, user_name, reply_content) values ('$forum_id','$username','$forum_reply')";
+            $conn -> query($query);
+
+			header("Location: specificforum.php?forum_id=".$forum_id);
+			die;
+		//}else
+		//{
+		//	echo "Please enter some valid information!";
+		//}
+	}
 
 ?>
 
@@ -85,11 +104,11 @@ $forum_id = $_GET['forum_id'];
                 </div>   
             </div>
 
-            <div class="reply-proper">
+            <form class="reply-proper" method="post">
                 <img id="user-profilepicture" src="Images/usericon.png"> <!-- user profile picture -->
-                <textarea id="user-reply" placeholder="Post your reply to the forum.."></textarea><!-- reply field -->
-                <input type="button" id="reply-button" value="Post reply"> <!-- reply button -->
-            </div>
+                <input type="text" id="user-reply" name="forum_reply" placeholder="Post your reply to the forum.." required><!-- reply field -->
+                <input type="submit" id="reply-button" value="Post reply"> <!-- reply button -->
+            </form>
             
             <div class="past-replies">
                 <p id="past-replieslabel">Other Replies</p>
