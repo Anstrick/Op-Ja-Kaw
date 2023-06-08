@@ -73,7 +73,7 @@ $username = $_SESSION['user_name'];
       </div>
 
         <!--Display Forums-->
-        <div id="random-forums">
+        <!-- <div id="random-forums">
           <div class="forum-box">
             <img src="https://via.placeholder.com/" alt="Forum Cover Image">
             <h2 class="forum-title">Forum Title 1</h2>
@@ -87,6 +87,48 @@ $username = $_SESSION['user_name'];
               
             </div>
             <button class="reply-button">Reply</button>
-          </div>
+          </div> -->
     </body>
 </html>
+
+<?php 
+$query = "SELECT * FROM forum"; // Assuming you have a table named "forums"
+$result = mysqli_query($conn, $query);
+
+// Check if the query was successful
+if ($result) {
+    // Loop through the fetched rows and generate HTML markup for each forum
+    while ($row = mysqli_fetch_assoc($result)) {
+        $forumTitle = $row['forum_title'];
+        $forumDescription = $row['forum_content'];
+        $authorName = $row['user_name'];
+        $forumDate = $row['date'];
+        $forumid = $row['forum_id'];
+
+        // Generate the HTML markup for the forum
+        echo '<div class="forum-box">';
+        echo '<img src="https://via.placeholder.com/" alt="Forum Cover Image">';
+        echo '<h2 class="forum-title">' . $forumTitle . '</h2>';
+        echo '<p class="forum-description">' . $forumDescription . '</p>';
+        echo '<div class="forum-info">';
+        echo '<div class="author-info">';
+        echo '<img src="https://via.placeholder.com/50" alt="Author Profile Image">';
+        echo '<p class="author-name">' . $authorName . '</p>';
+        echo '<p class="forum-date">' . $forumDate . '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '<button class="reply-button">Reply</button>';
+        echo '</div>';
+    }
+
+    // Free the result variable
+    mysqli_free_result($result);
+} else {
+    // Handle the error if the query fails
+    echo 'Error: ' . mysqli_error($con);
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+?>
