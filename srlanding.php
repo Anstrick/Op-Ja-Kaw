@@ -75,14 +75,6 @@ $username = $_SESSION['user_name'];
                     </div>
                     <a id="cro" href = "createroom.php">Create now!</a>
                 </div>
-                <div class="searchRoom">
-                    <img src="Images/searchroomicon.png" alt = "searchroomicon" id="sricon">
-                    <div class="searchIntro">
-                        <h2 id="srTitle">Search for Rooms</h2>
-                        <p id="searchcapt">Find study rooms that fits your taste</p>
-                    </div>
-                    <a id ="sro" href = "searchstudyroom.php">Search!</a>
-                </div>
             </div>
         </div>
     </body>
