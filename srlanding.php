@@ -54,11 +54,11 @@ if ($selectResult && mysqli_num_rows($selectResult) > 0) {
             </div>
 
             <div class="user-main">
-                <img src=<?php echo $user_pp ?> alt="Profile Picture" id="userMenu">
+                <img src=<?php echo $profilePicture ?> alt="Profile Picture" id="userMenu">
                 <div class="profile-button" id="profileBtn">
                     <div class="sub-profile">
                         <div class="user-info">
-                            <img src= "<?php echo $user_pp ?>" alt="Profile Picture">
+                            <img src= "<?php echo $profilePicture ?>" alt="Profile Picture">
                             <h3 id="user-name"><?php echo $username?></h3>
                         </div>
                         <ul>

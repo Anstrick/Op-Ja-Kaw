@@ -22,7 +22,7 @@ if (!$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)) {
 
 $create_table = "CREATE TABLE IF NOT EXISTS users (
     id BIGINT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_name VARCHAR(30) NOT NULL,
+    user_name VARCHAR(30) UNIQUE,
     password VARCHAR(255) NOT NULL,
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     email VARCHAR(30) UNIQUE,

@@ -5,11 +5,11 @@ session_start();
 include("connection.php");
 include("functions.php");
 
-$username = $_SESSION['user_name'];
+// $username = $_SESSION['user_name'];
 
-$sql = "SELECT * FROM users WHERE user_name = '$username'";
-    $result = $conn -> query($sql);
-    $row = $result -> fetch_assoc();
+// $sql = "SELECT * FROM users WHERE user_name = '$username'";
+//     $result = $conn -> query($sql);
+//     $row = $result -> fetch_assoc();
 
 
 ?>
