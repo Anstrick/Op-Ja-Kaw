@@ -22,6 +22,8 @@ $username = $_SESSION['user_name'];
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
         <script src="studyroomJS.js"></script>
+
+
     </head>
     <body>
         <header>
@@ -64,16 +66,16 @@ $username = $_SESSION['user_name'];
             <div class="gallery-container">
               <div class="gallery">
                 <div class="gallery-item">
-                    <img src="Images/forum cv.jpg" alt="Image 1">
+                    <img src="Images/about_img1.jpg" alt="Image 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/250" alt="Image 2">
+                    <img src="Images/about_img2.jpg" alt="Image 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/250" alt="Image 3">
+                    <img src="Images/about_img3.jpg" alt="Image 3">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://via.placeholder.com/250" alt="Image 4">
+                    <img src="Images/about_img4.jpg" alt="Image 4">
                 </div>
               <a class="gallery-ctrl-left" href="#" onclick="showPreviousItem(); return false;">&larr;</a>
               <a class="gallery-ctrl-right" href="#" onclick="showNextItem(); return false;">&rarr;</a>
@@ -91,25 +93,26 @@ $username = $_SESSION['user_name'];
             <div class="member-container">
                 <div class="dax">
                     <p class="devName">Gabriel Dax Agura</p>
-                    <p class="devEmail">email</p>
+                    <p class="devEmail">gpagura@up.edu.ph</p>
                     <p class="teamdesc">description</p>
                 </div>
                 <div class="benz">
                     <p class="devName">Benz Vrianne Beleber</p>
-                    <p class="devEmail">email</p>
+                    <p class="devEmail">bpbeleber@up.edu.ph</p>
                     <p class="teamdesc">description</p>
                 </div>
                 <div class="perse">
                     <p class="devName">Perserose Catalan</p>
-                    <p class="devEmail">email</p>
+                    <p class="devEmail">ppcatalan@up.edu.ph</p>
                     <p class="teamdesc">description</p>
                 </div>
                 <div class="gab">
                     <p class="devName">Gabriel Joshua Carreon</p>
-                    <p class="devEmail">email</p>
+                    <p class="devEmail">gmcarreon@up.edu.ph</p>
                     <p class="teamdesc">description</p>
                  </div>
             </div>
         </div>
     </body>
+<script src="aboutGallery.js"></script>
 </html>
