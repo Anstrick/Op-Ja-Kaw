@@ -194,7 +194,7 @@ body {
   /*--------------STUDY FORUM LANDING-----------------*/
 
   body{
-    background-image: url(Images/forum-bg.png);
+    background-image: url(Images/bg.jpg);
     background-size: cover;
 }
 
@@ -439,6 +439,8 @@ body {
 /* User info */
 .profile-details {
   margin: 50px 20px 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
 }
 
 #user_profile_name{
@@ -457,6 +459,7 @@ body {
   font-size: 12px;
   font-weight: bold;
   border-radius: 5px;
+  margin-top: 5px;
   
 }
 
@@ -869,7 +872,7 @@ body {
   display: flex;
   background: white;
   border-radius: 15px;
-  height: 25%;
+  height: 15%;
   border: 5px solid black;
   align-items: center;
 }
